@@ -1,0 +1,187 @@
+@font-face{
+	font-family: UDDig;
+	src: url(./org-unpack-20211227/UDDigiKyokashoN-R-01.ttf);
+	} 
+   
+   
+  
+ul li{
+list-style-type:none;
+}
+
+
+nav{
+  list-style: none;
+}
+
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+
+
+.main-header {
+	
+  width: 100%;
+  height: 110px;
+  background-image:url("./titleblueOK_MID.jpg");	
+  background-color: ;
+  
+  line-height: 30px;
+  margin: auto;
+ /*
+  text-align:left;
+  */
+  font-size:30px;
+
+}
+
+
+
+
+.main-header h5{
+ 
+
+}
+
+
+.containerleft {
+  width: 100%;
+  margin:auto;
+  display: flex;
+ 
+  justify-content: space-around;
+
+}
+
+.endd
+{
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+　/*
+　.main-menu li a {
+  padding: 0 20px;
+  font-size:40px;
+  line-height: 60px;
+}
+　*/
+/* */ 
+
+.main-header h1 {
+	
+  
+}
+
+.main-menu {
+  display: flex;
+}
+.main-menu a{
+  right: 50;
+}
+
+
+.main-menu li {
+  
+  
+  position: relative;
+  transition: .5s;
+}
+
+
+
+.main-menu li a {
+  padding: 0 20px;
+  font-size:30px;
+  line-height: 50px;
+}
+
+.main-menu li::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background-color: #fff;
+  transition: .5s;
+  margin: auto;
+}
+
+.main-menu li:hover {
+  	
+  background-color:#156de8 ;
+}
+
+.main-menu li:hover::after {
+  left: 0;
+  right: 0;
+}
+
+
+.robotp
+{
+  position: absolute;
+  top: 155px;
+  right: 120px;
+}
+
+
+
+.pazzlep
+{
+  position: absolute;
+  top: 450px;
+  left: 520px;
+}
+
+.text1p
+{
+  position: absolute;
+  top: 155px;
+  left: 100px;
+  font-size: 30px;
+}
+
+.text2p
+{
+  position: absolute;
+  top: 225px;
+  left: 150px;
+  font-size: 30px;
+}
+
+.text3p
+{
+  position: absolute;
+  top: 295px;
+  left: 200px;
+  font-size: 30px;
+}
+
+.textcenterp
+{
+  position: absolute;
+  top: 335px;
+  left: 350px;
+  font-size: 35px;
+  color: #D26900;
+}
+
+.centerGRA
+{
+	position: fixed;
+	left:300px;
+	position:relative; 
+	top:10px; 
+	width:60%; 
+	height:60%;
+	
+}

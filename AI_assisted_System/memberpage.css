@@ -1,0 +1,240 @@
+@font-face{
+	font-family: UDDig;
+	src: url(./org-unpack-20211227/UDDigiKyokashoN-R-01.ttf);
+	} 
+
+ul li{
+list-style-type:none;
+}
+
+nav{
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+.main-header {
+
+  
+  width: 100%;
+  height: 110px;
+  background-image:url("./titleblueOK_MID.jpg");	
+  background-color: ;
+  
+  line-height: 30px;
+  margin: auto;
+ /*
+  text-align:left;
+  */
+  font-size:30px;
+
+											  
+}
+
+
+/*  ------------------------------------*/
+
+
+ul{
+   width: 100%;
+   display: table;
+   text-align: center;
+}
+
+ul li{
+     display: inline-block;
+     float: none;
+	 list-style-type:none;
+}
+
+nav{
+  list-style: none;
+}
+/*  ------------------------------------*/
+
+.main-header h5{
+ 
+
+}
+
+.containerleft {
+  width: 100%;
+  margin:auto;
+  display: flex;
+ 
+  justify-content: space-around;
+
+}
+
+.endd
+{
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+
+.main-header h1 {
+	
+  
+}
+
+.main-menu {
+  display: flex;
+  text-align: center;
+}
+.main-menu a{
+  right: 50;
+}
+
+
+
+.main-menu li {
+  
+  
+  position: relative;
+  transition: .5s;
+}
+
+.main-menu li a {
+  padding: 0 20px;
+  font-size:30px;
+  line-height: 50px;
+}
+
+
+.main-menu li::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background-color: #fff;
+  transition: .5s;
+  margin: auto;
+}
+
+
+
+
+.main-menu li:hover {
+  	
+  background-color:#156de8 ;
+}
+/* #9ebdff */
+
+.main-menu li:hover::after {
+  left: 0;
+  right: 0;
+}
+
+/*  ------------------------------------*/
+
+
+
+
+/*
+
+.containercenter {
+  width: 100%;
+  margin:0px;	
+  display: inline-flex;
+  justify-content: center;
+}
+*/
+
+/*  ------------------------------------*/
+
+
+.box {
+  vertical-align: left;
+  text-align: middle;
+  /*
+  
+  border-bottom: 1px solid #ccc;*/
+  margin: auto;
+  
+  
+    
+}
+.box input{
+  width: 600px;
+  font-size: 30px;
+  color:;
+  border:2;
+  outline:none;
+}
+			
+.box img {
+  position: absolute;						
+  right: 400px;
+  top: 360px;
+  
+  
+  width: 40px;
+  height: 30px;
+}
+
+
+
+
+.centerGRA
+{
+	position: fixed;
+	left:300px;
+	position:relative; 
+	top:10px; 
+	width:60%; 
+	height:60%;
+	
+}
+
+
+
+/*
+
+<style>
+			.box 
+			{
+				position: relative;
+				width: 350px;
+				margin: 100px auto;
+				border-bottom: 1px solid #ccc;
+			}
+			
+			.box input 
+			{
+				width: 370px;
+				height: 30px;
+				border: 0;
+				outline: none;
+			}
+			
+			.box img 
+			{
+				position: absolute;						
+				right: 2px;
+				top: 2px;
+				width: 30px;
+				height: 24px;
+			}
+			
+		</style>
+*/
+
+
+/*
+.boxcontent{
+  position: relative;
+  
+  
+  text-align: left;
+  
+}*/

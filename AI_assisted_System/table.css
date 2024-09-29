@@ -1,0 +1,185 @@
+/*-----------------*/
+@font-face{
+	font-family: UDDig;
+	src: url(./org-unpack-20211227/UDDigiKyokashoN-R-01.ttf);
+	} 
+   
+ul li{
+list-style-type:none;
+}
+
+
+nav{
+  list-style: none;
+}
+
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+.main-header {
+	
+  width: 100%;
+  background-image:url("./titleblueOK_MID.jpg");	
+  background-color: ;
+  
+  line-height: 30px;
+  margin: auto;
+ /*
+  text-align:left;
+  */
+  font-size:30px;
+
+}
+
+
+
+
+.containerleft {
+  width: 100%;
+  margin:auto;
+  display: flex;
+ 
+  justify-content: space-around;
+
+}
+
+.endd
+{
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+　/*
+　.main-menu li a {
+  padding: 0 20px;
+  font-size:40px;
+  line-height: 60px;
+}
+　*/
+/* */ 
+
+.main-header h1 {
+	
+  
+}
+
+.main-menu {
+  display: flex;
+}
+.main-menu a{
+  right: 50;
+}
+
+
+.main-menu li {
+  
+  
+  position: relative;
+  transition: .5s;
+}
+
+
+
+.main-menu li a {
+  padding: 0 20px;
+  font-size:30px;
+  line-height: 50px;
+}
+
+.main-menu li::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background-color: #fff;
+  transition: .5s;
+  margin: auto;
+}
+
+.main-menu li:hover {
+  	
+  background-color:#156de8 ;
+}
+
+.main-menu li:hover::after {
+  left: 0;
+  right: 0;
+}
+
+
+
+
+/*----------------*/
+tr:nth-child(even) {
+  background: #CCC
+ 
+}
+tr:nth-child(odd) {
+  background-color: #CCC;
+ 
+}
+
+table{
+	border: 1px solid #666;
+	border-collapse:collapse;
+	border-color:#ECECFF;
+	width:85%
+}
+th{
+	background-color:#00538A;
+	font-size:24px;
+	width:20%;
+
+}
+tr,td{
+	border: 1px solid #666
+	transition:0.5s;
+}
+tr{
+	border-left:4px #333333 solid;
+	border-right:4px #333333 solid;
+	border-bottom:5px #ECECFF solid;
+}
+td{
+	font-size:20px;
+}
+
+
+td:hover
+{
+	background-color:#77CCFF;
+	
+}
+
+
+
+img{
+	border-radius:50%;
+}
+.test
+{
+	width:200px;
+	height:200px;
+	background-color:#CCC;
+	transition:0.5s;
+	opacity:0.3;
+}
+.test:hover{
+	background-color:#0000FF;
+}
+
+
+
+
+
+
+

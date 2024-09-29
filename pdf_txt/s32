@@ -1,0 +1,141 @@
+人工智慧於模擬人類對話系統設計 
+圖  18.  Portion of my conversational network 
+    上圖 18 為本研究系統程式的片段流程圖，當系統執行時優先對使用者進行
+名字的讀取，並對對話判斷對話主詞對象的分類，使系統了解對話對象且可有效
+執行主詞轉化，再提出協助語詞的判定，看要執行專家系統哪一區塊的資料比
+對。 
+37 
+逢甲大學 e-Theses & Dissertations (104 學年度) 
+人工智慧於模擬人類對話系統設計 
+圖  19.  片段指令(pos 指令用來比對關鍵字單字詞) 
+    本程式設計上優先分類對話領域，在對話領域分類其中單字資料庫，用來專
+門處理聊天會遇到各種類的對話字詞歸為一個獨立的字詞資料庫，例如：當聊到
+休閒喜好的對話像是繪畫或運動，再去做後續比對之後的對話內容。 
+圖  20.  片段程式(計算字串長度及比較字元符) 
+    當程式比對到關鍵單字詞時回傳資料庫內容，繼續比對整句對話是否有相同
+結構在整句的文句資料庫內，如果比對使一樣的字元內容及字數，立即輸出設定
+好的回答樣式資料庫內容，回應使用者且繼續對話樣式比對直到結束。 
+38 
+逢甲大學 e-Theses & Dissertations (104 學年度) 
+人工智慧於模擬人類對話系統設計 
+圖  21.  關鍵字詞資料庫執行結果   
+    上圖 21 為程式執行之結果，目前資料庫內有 40 筆單字量，未來還可以增加
+更多單字進去，在比對方法上使用窮舉法，窮舉法為可有效比對內容須 100%相
+符且字元字符一模一樣，才會執行對話反應樣式的後續動作。 
+    對話處理上有區分關鍵單字的領域，例如對話單字運動，用來區分之後對話
+的方向，當使用者聊到運動，比對程式會直接跳到設定好的與運動相關的資料庫
+繼續執行比對，使對話內容更專注於使用者的對話主題。 
+39 
+逢甲大學 e-Theses & Dissertations (104 學年度) 
+人工智慧於模擬人類對話系統設計 
+圖  22.  完整對話程式執行結果 
+    上圖 22 為完整程式的對話執行結果，包含關鍵單字比對、對話領域的分類
+選定、輸入句的整句比對資料庫及對話反應樣式輸出，在程式執行上可重複執行，
+比對時間也有記錄下來，看資料庫大小影響比對時間，目前比對結果都算正確。 
+40 
+逢甲大學 e-Theses & Dissertations (104 學年度) 
+人工智慧於模擬人類對話系統設計 
+第五章  結論與未來展望 
+5.1  結論 
+    現階段市面上有很多實際應用的產品，配備聊天系統在手機、機台、機器人
+已經是一種趨勢，可增加互動及產品附加價值，因此本研究透過國內外相關研究
+論文，去研究中文或者英文的對話系統，而本研究在對話上主要使用的是中文，
+比對上是從設定好的字串陣列資料庫中找尋字串，當輸入一串文句從中先抓取單
+一中文單字去比對字詞資料庫，找到資訊後再去判斷整句的敘述句資料庫，比對
+結果後輸出回答。中文因為編碼問題就要考慮到字元字串長度，目前抓去的規則
+還是在字數、字元上的比對，屬於文字形體的比對，而詞意的判斷上還需要再改
+進及設計，中文在設計比對上詞意難度很高。 
+      程式在使用者輸入字串後，套用規則去比對資料庫，篩選出相對應的反應
+回答句子。在程式設計定位上以助手的角色來協助使用者，以對話互動的方式來
+加入做選擇，類似設計一個電腦助手的輔助程式，在與使用者聊天對話的同時，
+系統可以抓取對話中特殊表達情緒及關鍵字的反應樣式，並透過文字的用字遣詞
+來加強對話語氣語詞的傳遞與增加人類對電腦互動的意願。 
+41 
+逢甲大學 e-Theses & Dissertations (104 學年度) 
+人工智慧於模擬人類對話系統設計 
+5.2  未來展望 
+    本研究以中文為主來設計比對系統，透過資料庫的建構及規則的建立，初步
+完成在簡單對話的聊天系統，模擬人類簡單應對之社交模式，未來，將致力於將
+對話系統(虛擬機器人)程式設計作為人工智慧用於機器人或機台的智慧化，設計
+出類似個人助手的輔助系統。以協助或陪伴人類如老人、小孩的對象機器人系統，
+期望人工智慧產品應用於人類生活中之概念。 
+    未來展望： 
+(1)  增加更多功能的互動，例如：互動遊戲、接收∕傳送訊息、語音等等有發展
+性的功能新增。 
+(2)  資料庫的增大及推論規則的處理複雜度增加，使對話樣式可以更多選擇及多
+樣化。 
+(3)  系統設計加入語意及詞性的分析，需要使用類似雲端運算處理的演算法來執
+行。 
+    期望未來可以設計出類似具有獨立意識的社交機器人系統，套用本對話系統
+框架的原理來設計一套個人助手，以實現工業 4.0 於開發人類與電腦、機台等智
+慧互動。 
+42 
+逢甲大學 e-Theses & Dissertations (104 學年度) 
+人工智慧於模擬人類對話系統設計 
+參考文獻 
+[1]  A.M.Turing, ”Computing Machinery and Intelligence”, Mind 49, pp.433-460 , 
+1950. 
+[2]  E. Robert , G. Robert and G. Beber , “Parsing the Turing Test. Philosophical and 
+Methodological  Issues  in  the  Quest  for  the  Thinking  Computer,”  Springer 
+Science, pp.3-301, 2008. 
+[3]  M.  Agarwal  and  S.  Goel,  “Expert  System  and  it's  Requirement  Engineering 
+Process,” Recent  Advances  and Innovations in  Engineering  (ICRAIE) ,pp.1  -  4, 
+2014. 
+[4]  S. Kang , Youngjoong and K.  J.  Seo , “A  Plan-Based Dialogue Model  Using a 
+Discourse Stack for Intelligent Human-Robot Interface Development,” Advanced 
+Language Processing and Web Information Technology International Conference 
+on,pp.162-167 , 2008. 
+[5]  B.  James  “Design  of  a  course  in  artificial  intelligence  and  expert  systems,”   
+Frontiers in Education Conference,pp.279 – 284, 1988. 
+[6]  R. Li and M. Xie, “Development of Entertaining Robots: A Study into Intelligent 
+Acquisition of Human Language in Robots,” Information and Automation, 2009. 
+ICIA '09. International Conference on, pp. 1368 - 1373 ,2009 
+[7]  L. Caviglione and W. Mazurczyk , “Understanding Information Hiding in iOS,” 
+Computer,pp.62 – 65,2015. 
+[8]  J. Hauswald , “Sirius: An Open End-to-End Voice and Vision Personal Assistant 
+and Its Implications for Future Warehouse Scale Computers, ” IEEE Micro, Page 
+1 , 2016. 
+[9]  BLUE FROG ROBOTICS(2007) , About BUDDY，from 
+43 
+逢甲大學 e-Theses & Dissertations (104 學年度) 
+人工智慧於模擬人類對話系統設計 
+  http://www.bluefrogrobotics.com/en/buddy/. 
+[10] 吳身潤著，人工智慧程式設計，維科圖書有限公司，2002 年 3 月，初版。 
+[11] 陳俊宏，自由交談式的LISP Recursion 學習環境，國立雲林科技大學電子與
+資訊工程技術研究所，碩士論文，1996 年。 
+[12] 徐恩普，歐陽崇榮  編譯，人工智慧-如何使用C 語言來發展人工智慧，松崗
+電腦圖書資料有限公司，1987 年 9 月。 
+[13] 孫家麟  編著，專家系統之理論與程式設計，松崗電腦圖書資料有限公司，
+1987 年 12 月。 
+[14] 吳琮璠、謝清佳著，資訊管理理論與實務，智勝文化事業有限公司，1996
+年。 
+[15] L.P.  Kaelbling,  M.L.  Littman  and  A.R.  Cassandra,  "Planning  and  acting  in 
+partially  observable  stochastic  domains  ,"  Artificial  Intelligence  (Elsevier)  101 
+(1–2) ,    page. 99–134, 2013. 
+[16] H.H. Bui, S. Venkatesh and G. West , “Policy recognition in the abstract hidden 
+markov  model.  ,”  Journal  of  Artificial  Intelligence  Research  ,  vol.  17,  p.  451–
+499,    2002. 
+[17] 許長進，中文問答系統－以網路為基礎之查詢詞擴充策，國立交通大學電機
+資訊學系，碩士論文，2006 年。 
+[18] 謝政勳，廖珗洲，李聯旺  編譯，人工智慧：智慧性統導論（第三版），全華
+圖書股份有限公司，2012 年 3 月。 
+[19] 蔡金翰，語音對話系統和對話策略之研究，國立交通大學電信工程學系，碩
+士論文，2005 年。 
+[20] 朱育德，基於字詞內容之適應性對話系統，國立中央大學資訊工程學系，博
+士論文，2006 年 7 月。 
+[21] M. Li and C. Feng , ”The use of artificial intelligence in the information retrieval 
+44 
+逢甲大學 e-Theses & Dissertations (104 學年度) 
+人工智慧於模擬人類對話系統設計 
+system  epoch-making  changes  in  information  retrieval  system,”  Information 
+Management and Engineering (ICIME), The 2nd IEEE International Conference 
+on , pp.310 - 313 , 2010. 
+[22] J.  Weizenbaum,  “ELIZA  –  A  Computer  Program  For  the  Study  of  Natural 
+Language Communication Between Man and Machine, ” in Communications of 
+the ACM, Volume 9, Issue 1, p 36-45 , January 1966   
+[23] D. Bolton(2000), A project to build better versions of Eliza in C,C++ and C#,  檢
+自 
+http://cplus.about.com/od/Eliza/a/A-Project-To-Build-Better-Versions-Of-Eliza-I
+n-C-Cpp-And-Csharp.htm. 
+45 
+逢甲大學 e-Theses & Dissertations (104 學年度) 

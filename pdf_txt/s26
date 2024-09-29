@@ -1,0 +1,161 @@
+第五章  結論與建議 
+第一節  結論 
+司法院於 108 年 8 月 5 日宣布即將導入 AI 進到先前已建置完成的「量
+刑資訊系統」及「量刑趨勢建議」， 
+「透過自動解讀刑事判決書中對影響量刑關鍵的因素，使用者只要透
+過介面操作，系統就能提供懲處與量刑參考，讓當事人在上法院前有個
+底，例如在酒駕的案件中，關鍵因素會是酒精濃度、駕駛車輛、傷害程
+度、是否肇逃、是否累犯、犯後態度等，以這些因素作為條件，AI 從資
+料庫中找出類似的案例，加以整理、分析，歸納出可能的判決。」
+(https://www.judicial.gov.tw/) 
+惟此系統僅有 8 種罪名的預測2，彼此罪名之間倆倆對比，尚未建立整
+體性架構，資料仍是分散處理(https://www.bnext.com.tw/) 
+有關專家系統的進展，李杰修(2019)運用 SVM 學習並分析刑事證據中
+有關數位錄影中，環境聲音與人聲的自動分類，特徵的標定，幫助偵查
+機關節省人力、時間，快速鎖定對象、縮小調查範圍，並確認嫌犯身分，
+2  妨害性自主罪、殺人與傷害致死罪、搶奪罪、強盜罪、電信詐欺罪、槍砲罪、不能安全駕駛罪、
+竊盜罪 8 種。 
+33 
+作為刑事案件認定事實的證據，與本研究所提以 AI 協助證據鑑定、聲
+音影像真實性檢測系統的想法仍有一大段的距離，仍需眾人的努力。 
+本研究分析近期國內外文獻，AI 系統應用在法律文件的分析、解構已
+成趨勢，只是應用部分尚在萌芽階段，以整部法律為架構基礎僅有
+Masha Medvedeva(2019 年)有提到，但外國判決、法律規定及語文結構
+與我國不同，僅能作為概念啟發；本研究所提「AI 法官系統」，以我國
+刑法典為基礎，將審判法官運用刑法典的思考路徑、法定要件等結構化，
+以法院判決書中，認事用法之關鍵法律要素提取出來，再回歸這些法律
+要素在刑法典架構中的位置，要件要素位置與相關連的部分將一清二
+楚，進而轉化為結構對照圖，更能清楚明白各要件要素的位置，再以圖
+形介面儲存，使用於 SVM 等演算法將更為迅速，結合近端運算及遠端
+儲存，將會比現行法院判決書的應用更加多元與迅速，未來技術成熟後，
+AI 法官系統如以 AI 晶片型態運作，將會更快速，預測準確率會更高；
+本研究所提「AI 法官系統」僅是本研究融會所學之法律學與資訊學後
+所提構想，因主、客觀因素限制，仍未經實證檢驗，待有機會更進一步
+時，再作更深入的研究。 
+第二節  建議 
+在撰寫本研究，參考法院判決時，發現司法機關資訊化的程度是影響整
+34 
+個架構無法快速標定、提取、結構化的主因，例如法院判決書的結構問
+題，理由項下，幾乎各案均不相同，有先程序部分，有先證據能力，未
+見統一格式，不利自動標定、提取作業，本研究建議可參考 Masha 
+Medvedeva(2019 年)有關「使用機器學習預測歐洲人權法院的判決」建
+立固定之 1.摘要資訊、2.適用程序、3.事實、4.法律適用、5.法官見解及
+6.正反雙方意見等 6 部分，建立我國法院判決敘述之結構，以利後續自
+動 標 定 作 業 。 再 者 ， 有 論 者 認 為 現 在 法 院 網 站 公 示 之 判 決 書
+(https://law.judicial.gov.tw/)或 OpenData(http://210.69.124.88/)，其內容
+檔案格式並不適合作為自然語言自動斷句使用，本研究亦深有同感。 
+再者，本研究認為「法律學研究應與時俱進」，現今法律界資訊化的程
+度遠遠比不上其他領域，究其原因，在於大多數的法律人對於資訊科技
+並不瞭解，且因為不瞭解產生了恐懼及排斥的心態，導致法律學資訊化
+的步履跟不上時代的發展，困守在法律的象牙塔裡，無法體會資訊科技
+帶來的便利性及風險性，造成人民將對國家秩序維持功能存在與否產
+生質疑，試問在現實世界與虛擬世界二者，後者不受司法管轄，是因為
+法律人的資訊化程度不足，再將現實世界的規則套用在資訊化的虛擬
+世界中，有如偵辦「鏡中世界」的案子，卻套用現實世界的規則，無法
+真正貼近問題、解決問題，只有少數人能理解判決，這樣是不能維持社
+35 
+會全般秩序，另一方面亦限制法律學的多元發展，建議法律人應跨足資
+訊領域。 
+最後，有關刑事案件資料的應用，仍限於法院判決資料，且僅有判決書、
+裁定書，其他有關刑事證據、刑事偵查文書、執行案件、撤回告訴等資
+料數位化保存、利用等均闕如，此等法律文書的 AI 應用廣度不足，建
+議司法機關將上述資料，使用區塊鍊技術保存，再透過層級化授權各相
+關人員的應用。 
+本研究相關資料將會登載於 http://aijudge.com.tw，本研究作者聯繫方
+式：czcat2000@gmail.com 
+參考文獻 
+中文部分 
+1.  葉怡成,”類神經網路模式應用與實作”, 2003 年 8 月 3 版,臺北,儒林圖
+書公司。 
+2.  蘇南,”論人工智慧運用於律師服務的未來展望”,2018 年 6 月號,臺北,
+全國律師。 
+3.  段 品 任 , ” 人 工 智 慧 於 法 律 的 應 用 - 死 刑 與 無 期 徒 刑 的 案 件 分
+類”,2019 年 7 月,國立成功大學經濟系碩士論文。 
+4.  林琬真、郭宗廷、張桐嘉、顏厥安、陳昭如、林守德,”利用機器學
+習 於 中 文 法 律 文 件 之 標 記 、 案 件 分 類 及 量 刑 預
+測”,2012,Computational Linguistics and Chinese Language Processing。 
+5.  陳世昌、陳顯武,”法資訊學上法本體論研究的興起與發展之分析-一
+36 
+個基本哲學概念意義之轉換”,2004 年 9 月,台大法學論叢 33 卷 5
+期。 
+6.  劉昌誠(Chang-Cheng  Liu);徐建業(Chien-Yeh  Hsu);陳炯旭(Chiung-Hsu 
+Chen);蕭百勝(Bai-Sheng  Hsiao),”應用類神經網路建構妨害性自主罪
+再犯預測模型之初步嚐試”,  2010 年,亞洲家庭暴力與性侵害期刊, 
+6(1),   
+7.  中 央 研 究 院 漢 語 料 庫 的 內 容 與 說 明 , 中 央 研 究 院 平 衡 語 料 庫 , 
+http://asbc.iis.sinica.edu.tw/ 
+8.  黃詩淳、邵軒磊 ,”運用機器學習預測法院判決 -法資訊學的實
+踐”,2017 年 11 月,月旦法學雜誌 270 期,臺灣大學深耕型研究計畫
+「家事裁判之法資訊學研究：文字探勘、決策樹與機器學習」研究
+成果。 
+9.  李杰修、溫哲彥,”以聲音基頻與 SVM 分類器為基礎之人聲分類方
+法”,2019 年 11 月,刑事科學第八十五期，19~31 頁。 
+英文部分 
+1.  Hiroaki Yamada,Simone Teufel,Takenobu Tokunaga,” Building a corpus of 
+legal  argumentation 
+in  Japanese  judgement  documents:  towards 
+structure‑based  summarization”,  Artificial  Intelligence  and  Law  (2019) 
+27:p141–170。 
+2.  Masha Medvedeva,Michel Vols,Martijn Wieling,“Using machine learning 
+to predict decisions of the European Court of Human Rights,Artificial”, 
+Intelligence  and 
+(2019),https://doi.org/10.1007/s10506-019-
+09255-y 
+Law 
+3.  Nguyen, Truong - Son ; Nguyen, Le - Minh ; Tojo, Satoshi ; Satoh, Ken ; 
+Shimazu,  Akira,2018, ” Recurrent  neural  network-based  models  for 
+recognizing  requisite  and  effectuation  parts  in  legal  texts”，Artificial 
+Intelligence  and  Law,  June,  2018,  Vol.26(2),  p.169(31)  [Peer  Reviewed 
+Journal] 
+4.  Yung-Tsan Jou, Yih-Chuan Wu, Wen-Tsann Lin，2015.”Applying Decision 
+Tree and Neural Network to Raise the Performance of Human Training 
+Quality ” ， Journal  of  Quality  Vol.22,No.5(2015) ， DOI: 
+10.6220/joq.2015.22(5).02。 
+37 
+5.  Hochreiter  S,  Schmidhuber  J  (1997)  Long  short-term  memory.  Neural 
+Comput 9(8):1735–1780 
+6.  David Albert Huffman,”minimum-redundancy-codes”, 1952。 
+7.  Vern  R.  Walker,Nathaniel  Carie,Courtney  C.DeWitt,Eric  Lesh,”A 
+framework  for  the  extraction  and  modeling  of  fact-finding  reasoning 
+from 
+the  Vaccine/Injury  Project 
+from 
+Corpus”,Artif 
+Intell  Law(2011)19:291–331,DOI  10.1007/s10506-011-
+9115-2。 
+legal  decisions:lessons 
+8.  Tomas  Mikolov  ,  Kai  Chen  ,  Greg  Corrado  ,  Jeffrey  Dean  ,”Efficient 
+Estimation of Word Representations in Vector Space”,2013 
+網站資料 
+1.  https://www.judicial.gov.tw/juds/u107.pdf,最後瀏覽日期 20191115。 
+2.  https://blog.lawsnote.com/2019/10/人工智慧在台灣法律領域的發展
+狀況/,最後瀏覽日期 20191115。 
+3.  https://buzzorange.com/techorange/2018/08/21/how-big-data-and-ai-
+will-develop,最後瀏覽日期 20191021。 
+4.  https://news.ltn.com.tw/news/society/breakingnews/2039476, 最 後 瀏
+覽日期 20191111。 
+5.  https://en.wikipedia.org/wiki/Ross_Quinlan,最後瀏覽日期 20191126。 
+6.  https://www.itread01.com/content/1546598546.html, 最 後 瀏 覽 日 期
+20191126。 
+7.  https://colah.github.io/posts/2015-08-Understanding-LSTMs/, 最 後 瀏
+覽日期 20191126。 
+8.  http://karpathy.github.io/2015/05/21/rnn-effectiveness/, 最 後 瀏 覽 日
+期 20191130。 
+9.  https://medium.com/@tengyuanchang/比較長短期記憶模型-lstm-與
+改 良 後 的 遞 歸 神 經 網 路 模 型 -gru-813dec22ec6d, 最 後 瀏 覽 日 期
+20191130。 
+10. https://diggdata.in/post/94066544971/support-vector-machine-
+38 
+without-tears ,最後瀏覽日期 20191115。 
+11. https://zhuanlan.zhihu.com/p/31886934,最後瀏覽日期 20191204。 
+12. http://www.cmlab.csie.ntu.edu.tw/~cyy/learning/tutorials/SVM2.pdf 
+最後瀏覽日期 20191204。 
+13. https://www.bnext.com.tw/article/55177/ai--judgment  ,最後瀏覽日期
+20191110。 
+14. https://www.judicial.gov.tw/jw9706/pdf/20180907-1917-1.pdf, 最 後 瀏
+覽日期 20191110。 
+15. https://www.bnext.com.tw/article/55177/ai--judgment  最後瀏覽日期
+20191110。 
+16. https://law.judicial.gov.tw/,司法院法學資料檢索系統。 
+17. http://210.69.124.88/,司法院裁判書 OpenData 網站。 
+39 

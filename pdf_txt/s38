@@ -1,0 +1,344 @@
+圖 4.1. MFCC  之特徵參數求取流程圖.[43] 
+   MFCC  之特徵參數求取流程圖如圖4.1.所示，以下分別說明。 
+(1)  連續語音訊號輸入： 
+    語音訊號是由手機所擷取下來的，它的取樣頻率為  48000  取樣
+點/秒，解析度為  16  位元/取樣點，也就是每秒有  48000  點語音的
+34 
+波形信號。 
+(2)  音框化( Frame Blocking )： 
+人類的語音訊號約在  20ms~30ms  會呈現半穩態，因此在觀測
+語音訊號的特徵時，我們會將  N  個取樣點集合成一個觀測的單
+位，此單位稱為「音框」，為了使音框與音框之間的變化不要太
+大，通常我們會依一定的比例來將音框重疊，例如  1/3  、 1/2  等
+等，本研究中，我們取音框的大小  N  為  960  點，音框重疊的部分
+為  480  點，也就是重疊了  1/2  ，音框長度約為  20ms  。 
+(3)  計算能量( Calculate Energy )： 
+音框化過後，計算每一個音框的能量值，取其對數能量，作為
+之後  MFCC  第十三個參數。其計算公式如式(4.1)，其中  S  為音框
+內之訊號值。 
+                    Log Energy = 10 ∗ log 10 (𝑆2)                                  (4.1) 
+(4)  預強調( Pre-Emphasis )： 
+    預強調將語音訊號通過一個高通濾波器，該高通濾波器如式
+(4.2)，其中 a 介於  0.9  至  1  ，本實驗使用之 a 為  0.95  。預強調之
+目的是為了消除並補償發聲過程中聲帶與嘴唇所產生壓抑高頻的效
+應，意即用來突顯高頻的共振峰。 
+35 
+                    H(z) =  1 − a × 𝑧−1                                                  (4.2) 
+(5)  漢明窗( Hamming Window )： 
+    漢明窗之使用是為了使得音框與音框間的左右連續性增加。如
+果輸入的訊號一定保證是週期訊號，就沒必要再乘上漢明窗，由於
+人類的聲音訊號為時變訊號，所以如果不乘上漢明窗將會導致之後 
+快速傅立葉轉換分析訊號的時候會產生很多不必要的訊號，造成分
+析上的差錯產生。漢明窗之數學式如式(4.3) 
+     (4.3)  
+(6)  快速傅立葉轉換( Fast Fourier Transform, FFT )： 
+    在語音訊號處理中，最常被使用到的技術就是將時域( Time 
+Domain )的訊號轉換至頻率域( Frequency Domain )上，使我們容易從
+能量上的分布情形來觀察訊號之特性。  FFT  是運用離散傅立葉轉
+換( Discrete Fourier Transform, DFT )中複數對偶之特性，藉此來加速
+運算， DFT  之計算如式(4.4)，當 𝑊𝑛 =   𝑒−
+𝑗𝑘2𝜋
+𝑁 ，0 ≤ 𝑘 ≤ 𝑁 − 1。 
+         X(k) =   ∑
+𝑁−1
+𝑛=0
+𝑥(𝑛)𝑊𝑁
+𝑘𝑛 
+                       (4.4) 
+(7)  三角帶通濾波器( Triangular Band-pass Filter )： 
+    得到能量的頻譜後，將能量的頻譜乘上一組  M  個的三角帶通
+濾波器，再將每一個頻帶計算其對數量值，得到對數能量。本實驗
+36 
+取 20 個三角帶通濾波器。三角帶通濾波器主要目的有兩項，第一項
+是對頻譜進行平滑化，並消除諧波的作用，突顯原先語音的共振
+峰。第二項則是降低資料量。值得注意的是：這些三角帶通濾波器
+在梅爾頻率( Mel Frequency )上是平均分佈的，而梅爾頻率和一般頻
+率  f  的關係式如下式(4.5)。 
+mel(f) = 1125 × ln(1 +
+𝑓
+700
+)                  (4.5) 
+(8)  離散餘弦轉換( Discrete Cosine Transformation, DCT )： 
+    將求出來的  20  個對數能量  Ek  代入離散餘弦轉換，求出  L  階
+的梅爾倒頻譜參數，  L  通常取  12  。將之前轉到頻率域的訊號再轉
+回時域，離散餘弦轉換的公式如下式(4.6)。 
+𝐶𝑚 =   ∑
+𝑀
+𝑘= 1
+𝐸𝑘 × cos [𝑚 (𝑘 −
+1
+) ×
+2
+𝜋
+𝑀
+] , 𝑚 = 1,2, … , 𝐿
+       (4.6) 
+  而在網路輸出之資料方面，則必須先進行類別型資料轉換，資
+料庫中的類別變數須以虛擬變數來代替。轉換後資料如表 4-2.所
+示。 
+37 
+表4-2. 類別型變數資料轉換內容. 
+資料庫記載內容 
+轉換後之內容 
+誠實 
+說謊 
+1    0 
+0    1 
+4.4  實驗流程 
+    本研究先由設計之實驗蒐集受試者之錄音資料，並以蒐集到之
+錄音資料進行  MFCC  特徵轉換以及類別型變數資料轉換，錄音資
+料之取樣頻率為  48000  取樣點/秒，總計錄音  4  秒，故每筆錄音資
+料共有  192000  點，為了針對受試者有發聲之情況來進行測謊判斷
+及增加訓練效率，本研究將每筆錄音資料自  20001  資料點開始，取 
+2.5  秒之錄音，共取  120000  個資料點，將這  120000  個資料點重
+複三次以增加訓練之資料量，故每筆錄音共有  360000  個資料點，
+將這  360000  個資料點作為一個語音訊號進行  MFCC  特徵轉換，
+轉換過程如4.3節所述。轉換完畢後每筆語音資料會形成  749  個音
+框，每個音框有  13  項經過  MFCC  轉換後之參數。為增加訓練特
+徵，本研究將每  107  個音框之  MFCC  特徵參數合併後進行 
+mapminmax  標準化作為網路之輸入資料。因此每筆錄音資料會形成 
+38 
+7  次的網路輸入資料，網路輸出資料則為該錄音資料正確答案之類
+別，其正確答案之類別型資料轉換內容如上表4-2.。由於每筆錄音
+資料會有  7  次的輸出答案，故以此  7  次測驗結果之平均作為該筆
+錄音測謊結果判斷之依據。本實驗蒐集了  20  個人的資料，每個人
+有十筆錄音資料，共有  200  筆錄音資料。本實驗使用  RC  中的 
+Echo state network  做為架構，以隨機抽取其中  15  個人之錄音資料
+做為為訓練資料，其餘  5  人之錄音資料做為測試資料，共隨機抽樣 
+10  次。並將其結果與受試者填寫於問題列表清單之正確答案做比
+較，作為其判斷正確性之依據。其網路架構如下圖4.2.。其中  u(n) 
+為網路之輸入資料，  Win  為一未經訓練的權重層，  f  為 一 非線性
+函 數 ， Wout  為訓練後所得之權重，  W  為連結水庫內部的權重矩
+陣， x(n)  為第 n  步時  Reservoir  的狀態向量， y(n)  為網路之輸
+出答案。 
+圖 4.2. ESN  網路架構圖. 
+39 
+4.5  校驗方法 
+    本研究主要針對測試資料經過網路後之判斷結果來校驗，其正
+確答案來源為受試者在實驗開始前所填寫之問題列表清單。 
+    由於誠實與說謊是類別型之資料，因此我們將其以虛擬變數來
+代替，其轉換結果請參見上表4-2.，由於每筆錄音資料會有  7  次的
+輸出答案，故以此  7  次測驗結果之平均作為該筆錄音測謊結果之判
+斷依據，也就是說依照此  7  次測驗結果中判斷為誠實或說謊比例較
+高之一方會成為該筆錄音之判斷結果。當測試者所提供之答案與本
+模型所判斷出之結果相同時，定義為判斷正確，當測試者提供之答
+案與本模型判斷之結果不同時，則定義為判斷不正確。本研究所使
+用的評斷指數為正確率，以模型對每個人所進行測謊判斷之正確率
+來驗證本模型之準確度。其正確率之計算方式如下式(4.7)。 
+            正確率 =  
+正確題數
+總題數
+× 100%               (4.7) 
+4.6  判斷結果與討論 
+    我們將測試資料輸入網路即可利用已建立好的模型進行判斷，
+並分別對每位做為測試資料的人的測謊結果進行正確率之計算，其
+結果如下表4-3.。 
+40 
+人次 
+正確率( % ) 
+表4-3. 隨機抽樣  10  次判斷之正確率. 
+1 
+60 
+80 
+50 
+50 
+60 
+60 
+50 
+50 
+80 
+60 
+2 
+50 
+50 
+80 
+70 
+60 
+70 
+80 
+70 
+70 
+70 
+3 
+70 
+60 
+50 
+60 
+80 
+60 
+60 
+50 
+50 
+50 
+4 
+80 
+50 
+60 
+100 
+80 
+70 
+80 
+50 
+60 
+70 
+5 
+80 
+60 
+70 
+40 
+80 
+50 
+70 
+80 
+90 
+70 
+    由表4-3.之結果可得知，平均正確率可達 65%  ，可以以此證
+明，本模型的確有達到測謊之效果。 
+4.7  結論 
+    本研究使用人工智慧理論開發一個判斷測謊之模式，使用  ESN 
+之演算法，提出一個可以達到測謊效果之方式。以五位受試者進行
+模型之測試，其正確率可達 65%  ，與目前常見的透過藉由觀測受
+試者之皮膚電阻、呼吸波與血壓為主要參數之測謊儀比起來有相當
+水準之準確度，且比起一般之測謊儀使用之參數，本研究使用之參
+數有不需要與受試者有肢體接觸就能進行測謊之特性，對於測謊之
+手段有更大的靈活性，對於輔助測謊儀之判斷也有很大的幫助。 
+41 
+第五章、結論與未來工作 
+5.1  總結 
+    本論文利用人工智慧應用於雨量預測以及測謊判斷。在第三章
+中使用  ESN  為基礎架構，經由實際的測試及驗證，證明透過  ESN 
+架構能夠達到雨量預測之效果。而在此模型中最為重要的參數分別
+為雨量、氣壓、濕度。與其餘神經網路之模型相比，本章提出之模
+型具有更好的預測效果，並且有更快的運行速度。 
+    在第四章中，我們同樣以  ESN  為基礎架構，透過將錄音資訊
+經過  MFCC  語音處理配合  ESN  模型，提出一個可以達到測謊效
+果之方式。以五位受試者進行模型之測試，其正確率可達  65%  ，
+與目前常見的透過藉由觀測受試者之皮膚電阻、呼吸波與脈搏波為
+主要參數之測謊儀比起來有相當水準之準確度，且比起一般之測謊
+儀使用之參數，本研究使用之參數有不需要與受試者有肢體接觸就
+能進行測謊之特性，對於測謊之手段有更大的靈活性，對於輔助測
+謊儀之判斷也有很大的幫助。 
+     本論文不只證明了  ESN  架構可應用於雨量預測及測謊判斷，
+更證明了透過人工智慧，機 器 變 得 越 來 越 聰 明 ， 其 運 用 也 更 加
+42 
+廣 泛 且 貼 近 人 類 的 日 常 生 活 。  
+5.2  未來工作 
+    在第三章中，雖然證明 ESN  架構可進行雨量之預測，但對於
+突然間的暴雨仍不易準確預測，如何有效處理這類資料，值得深入
+研究。比如在輸入資料中增加多個氣象站的資料，其原因在於我們
+認為氣象資料之變化會在時間與空間中傳遞，因此增加氣象站之資
+料或許能夠使網路也根據其他氣象站的資料納入參考，也許在本地
+區降雨之前在其他區域已有所跡象，或許對於突如其來的暴雨有使
+其預測更加準確的可能。在第四章中，本研究之結果已達到不錯的
+準確度，若要更進一步的提升準確度，將聲音訊號進行區域性的濾
+波或配合其他生理訊號作為輸入訊號是個可以進行討論的議題。 
+43 
+參考文獻 
+[1] https://www.bnext.com.tw/article/42632/what-is-ai 
+[2] https://www.bnext.com.tw/article/38923/BN-2016-03-14-120814-         
+178 
+[3] M. Lukoševičius and H. Jaeger, ”Reservoir computing approaches to   
+recurrent neural network training,” Computer Sci. Rev. 3, 127, 2009. 
+[4] L. Larger, A. Baylón-Fuentes and R. Martinenghi, ”High-Speed 
+Photonic Reservoir Computing Using a Time-Delay-Based 
+Architecture:Million Words per Second Classification,” Phys. Rev. X 7 , 
+011015, 2017. 
+[5]  張育誠, “Prediction of Sensory Input Using Echo State Network,” 
+碩士論文,  國立中正大學電機工程研究所, 2011. 
+[6] M. Lukoševičiusin, ”Neural networks: Tricks of the trade,” Künstliche 
+Intelligenz manuscript, 365, 2012. 
+[7] B. Schrauwen, D. Verstraeten and J. Campenhout, “An overview of 
+reservoir computing: theory, applications and implementations,” 
+Proceedings of the 15th European Symposium on Artificial Neural 
+Networks, 471, 2007. 
+[8] C. Gallicchio and A. Micheli, “Deep reservoir computing: A critical 
+analysis,” European Symposium on Artificial Neural Networks,   
+Computational Intelligence and Machine Learning, 27, 2016. 
+[9] H. Jaeger, “Tutorial on training recurrent neural networks, covering 
+BPPT, RTRL, EKF and the echo state network,” GMD Report 159, 2002. 
+[10] H. Jaeger, “The “echo state” approach to analyzing and training   
+recurrent neural networks,” GMD Report 148, 2001. 
+[11] L. Richardson, ”Weather Prediction by Numerical Process,”   
+44 
+Cambridge, The University press, 1922. 
+[12] https://wol.jw.org/cmn-Hant/wol/d/r24/lp-ch/102001246 
+[13]  吳宗堯及葉信良, ”現有颱風預報研究成果作業化之研究(二) ,” 
+行政院國家科學委員會防災科技研究報告 78-29 號, 147, 1989. 
+[14]  申雍及陳守泓, ”梅雨期間作物承受豪雨風險機率之估算,”  中華
+農學會報  168, 93, 1994. 
+[15]  廖浩彥, ”利用雷達觀測直接反演氣象變數進行資料同化已改進
+短期定量降水預報-2008 SoWMEX IOP8  個案分析,”  碩士論文,  中央
+大學大氣物理研究所, 2014. 
+[16]  吳明進,  陸雲及童慶斌, ”區域氣候變遷模擬系統之整合與應用-
+子計畫 VI：全球氣候變遷對台灣區域氣候與水資源衝擊之評析(I) ,” 
+行政院國家科學委員會, 2002. 
+[17] R. Deo and M. Şahin, “Application of the extreme learning machine 
+algorithm for the prediction of monthly Effective Drought Index in 
+eastern Australia,” Atmospheric Research Vol 153, 512, 2015. 
+[18] R. Hashim, ”Selection of meteorological parameters affecting 
+rainfall estimation using neuro-fuzzy computing methodology,” 
+Atmospheric Research Vol 171, 21, 2016. 
+[19] P. Nayak, K. Sudheer and K. Ramasastri, “Fuzzy computing based 
+rainfall–runoff model for real time flood forecasting,” Hydrological 
+Processes Vol 19, 955, 2005. 
+[20] P. Nayak, K. Sudheer and D. Rangan, “A neuro-fuzzy computing 
+technique for modeling hydrological time series,” Journal of Hydrology 
+Vol 291, 52, 2004. 
+45 
+[21]  段智懷, ”倒傳遞類神經網路小區域颱風降雨預報-前饋式與遞迴
+式之比較,”  碩士論文,逢甲大學水利工程研究所, 2004. 
+[22] R. Teschl, W. Randeu and F. Teschl, ”Improving weather radar 
+estimates of rainfall using feed-forward neural networks,” Neural 
+networks Vol 20, 519, 2007. 
+[23] A. Manzato, A. Cicogna and A. Pucillo, ”6-hour maximum rain in 
+Friuli Venezia Giulia:Climatology and ECMWF-based forecasts,” 
+Atmospheric Research Vol 169, 465, 2016 
+[24] S. Sodoudi, A. Noorian and M. Geb, ”Daily precipitation forecast of 
+ECMWF verified over Iran,” Theor Appl Climatol Vol 99, 39, 2010. 
+[25] H. Ruigar and S. Golian, ” Prediction of precipitation in Golestan 
+dam watershed using climate signals,” Theor Appl Climatol Vol 123, 
+671, 2016. 
+[26] M. French, W. Krajewski and R. Cuykendall, ”Rainfall forecasting 
+in space and time using a neural network,” Journal of Hydrology Vol 137, 
+1, 1992. 
+[27] W. Sun, S. Shan and C. Zhang, ”Prediction of Typhoon Losses in the 
+South-East of China Based on B-P Network,” International Conference 
+on Artificial Intelligence and Computational Intelligence, 2010. 
+[28]  吳明進,  陸雲及童慶斌, ”區域氣候變遷模擬系統之整合與應用-
+子計畫 VI：全球氣候變遷對台灣區域氣候與水資源衝擊之評析(I),” 
+行政院國家科學委員會, 2002. 
+[29]  孫建平及張斐章, ”倒傳遞類神經網路演算法於時雨量預測之研
+究,”  農業工程研討會, 209, 1995. 
+[30]  張斐章,  胡湘帆及黃源義, ”反傳遞模糊類神經網路於流量推估
+之應用,”  中國農業工程學報,  第 44 卷,  第 2 期, 26, 1998. 
+46 
+[31]  林柏承, ”應用類神經網路於颱風降雨量的推估,”  碩士論文,  成
+功大學水利及海洋工程學系, 2000. 
+[32]  羅華強, ”類神經網路-MATLAB 的應用,”  高立圖書, 2005. 
+[33] D. Smith, “Why We Lie,” St. Martin’s Press, 2004. 
+[34] B. DePaulo, D. Kashy and S. Kirkendol, ” Lying in Everyday Life,” 
+Personality and Social Psychology Vol 70, 979, 1996. 
+[35]  徐國超, ”意在言外？--以口語化行為特徵進行『測謊鑑定前篩
+試驗』之可行性,”  碩士論文,  國立台北大學犯罪學研究所, 2011. 
+[36]  林故廷及翁景惠, ”測謊 100 問,”  書佑書局, 2003. 
+[37] National Research Council, ” The Polygraph and Lie Detection,“ 
+The National Academic Press, 2003. 
+[38] C. Davatzikos, K. Ruparel and Y. Fan, ”Classifying spatial patterns 
+of brain activity with machine learning methods: Application to lie 
+detection,” NeuroImage Vol 28, 663, 2005. 
+[39] K. Park, H. Suk and H. Hwang, ”A functional analysis of deception 
+detection of a mock crime using infrared thermal imaging and the 
+Concealed Information Test,” Frontiers in Human Neuroscience, 7, 2013. 
+[40] Y. Zhou, H. Zhao and X. Pan, ” Deception detecting from speech 
+signal using relevance vector machine and non-linear dynamics features,” 
+Neurocomputing Vol 151, 1042, 2015. 
+[41]  王小川, “語音訊號處理,”  全華圖書股份有限公司, 2009. 
+[42]  陳奕宏, ”32 位元處理器之定點數 MFCC 演算法的改進與探討,” 
+碩士論文,  國立清華大學資訊工程學系, 2006. 
+[43] J. Roger, "Audio Signal Processing and Recognition," (in Chinese) 
+47 
+available at the links for on-line courses at the author's homepage at  
+http://www.cs.nthu.edu.tw/~jang. 
+[44]  謝依蘭, ”語音訊號數位處理,”  松崗電腦圖書資料股份有限公司, 
+1992 
+48 

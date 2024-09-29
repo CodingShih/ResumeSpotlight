@@ -1,0 +1,666 @@
+顯著性值為  0.000 < 0.05  ，所以不同的測試資料集對於準確率有顯著影響，無母
+數  Friedman  檢定結果如表 4- 12 所示。 
+表 4- 12 ACO+SVM 不同測試資料集 Friedman  檢定 
+檢定統計量 a 
+個數 
+卡方 
+自由度 
+漸近顯著性
+6
+34.185
+11
+.000
+a. Friedman  檢定 
+由上述兩個實驗 4.2.1、4.3.1 可知訓練週期長短對於準確率沒有顯著影響，而
+不同的測試資料集對準確率有顯著影響。   
+本節的蟻群算法支援向量機模式分析與 4.2 節決策樹模式分析顯示這兩種模
+式對於預測準確率訓練資料集資料量的多寡沒有顯著的影響，所以接下來的實驗
+均訓練資料集的週期均用 12 個月。 
+4.3.2  蟻群算法支援向量機不同變數準確率 
+本節實驗使用的測試資料集和訓練資料集與上一節 4.3.1 ACO + SVM 模式半
+離散化實驗相同，為比較 2.5.1 節 ACO+SVM 模式採用不同變數準確率的差異，
+本實驗用 3.2 節的離散化變數、3.4 節連續型變數來做實驗，實驗準確率的結果比
+較如表 4- 13 所示。 
+表 4- 13 ACO + SVM 不同變數準確率 
+變數種類  Set 1  Set 2  Set 3  Set 4 Set 5 Set 6 Set 7 Set 8 Set 9 Set 10 Set 11 Set 12 Avg
+半離散化  57.1  52.4  42.9  57.1  52.4  42.9  66.7  61.9  57.1  38.1  38.1  61.9  52.4 
+離散化 
+連續型 
+61.9  66.7  52.4  52.4  61.9  52.4  52.4  47.6  71.4  47.6  23.8  61.9  54.4 
+71.4  47.6  52.4  42.9 47.6 38.1 42.9 61.9 52.4 57.1  33.3  52.4 50.0
+45 
+以無母數 Friedman 檢定離散化、半離散化及連續型變數對於準確率的差異，
+檢定的漸進顯著性值為  0.315 > 0.05  ，所以不同的變數對於準確率沒有顯著差異，
+無母數  Friedman 檢定結果如表 4- 14 所示。 
+表 4- 14 ACO + SVM  不同變數準確率 Friedman 檢定 
+檢定統計量 a 
+個數 
+卡方 
+自由度 
+漸近顯著性
+12
+2.311
+2
+.315
+a. Friedman  檢定 
+以 Wilcoxon 檢定兩兩變數種類之間有無差異，結果顯示兩兩變數種類之間無
+顯著差異，Wilcoxon 檢定結果如表 4- 15 所示。 
+表 4- 15 ACO + SVM  不同變數 Wilcoxon 檢定 
+檢定統計量 c 
+離散  -  半離散 連續型  -  半離散 連續型  -  離散 
+Z  檢定 
+漸近顯著性  (雙尾) 
+-.451a
+.652
+-.670b
+.503
+-1.315b 
+.189 
+a.  以負等級為基礎。 
+b.  以正等級為基礎。 
+c. Wilcoxon  符號等級檢定 
+由本節的實驗準確率結果的檢定可知 ACO + SVM 模式採用不同的變數種類
+對於準確率沒有顯著影響。 
+46 
+4.4  格子點算法支援向量機模式分析 
+本實驗使用 3.5 節 Grid Search + SVM 模式採用 3.2 節離散化變數及 3.3 節半
+離散化變數及 3.4 節連續型變數準確率並比較其差異，每個測試資料集的訓練資
+料集為 12 個月，本模式的系統參數設定值如表 4- 16 所示。 
+表 4- 16 Grid Search + SVM  模式參數設定值 
+參數 
+設定值  參數 
+設定值 
+C 參數最大值 
+C 參數最小值 
+C 參數間距 
+2^10 
+2^-2 
+2^0.1 
+參數最大值 
+參數最小值 
+參數間距 
+2^5 
+2^-1 
+2^0.1 
+實驗的結果比較如表 4- 17 所示。 
+表 4- 17 Grid Search + SVM  不同變數準確率 
+變數種類  Set 1  Set 2  Set 3  Set 4 Set 5 Set 6 Set 7 Set 8 Set 9 Set 10 Set 11 Set 12 Avg
+半離散化  52.4  52.4  47.6  52.4 57.1  23.8  85.7  38.1  57.1  61.9  47.6  52.4  52.4 
+離散化 
+連續型 
+42.9  38.1  52.4  52.4  57.1  42.9  33.3  42.9  38.1  38.1  52.4  57.1  45.6 
+51.7  47.6  71.4  57.1 66.7 47.6 57.1 61.9 47.6 61.9  52.4  38.1 55.6
+以無母數 Friedman 檢定半離散化、離散化、連續型變數對於準確率的差異，
+檢定的漸進顯著性值為  0.070 > 0.05  ，所以 3 種不同的變數對於準確率沒有顯著
+差異，無母數  Friedman  檢定結果如表 4- 18 所示。 
+47 
+表 4- 18 Grid Search + SVM  不同變數準確率 Friedman 檢定 
+檢定統計量 a 
+個數 
+卡方 
+自由度 
+漸近顯著性
+12
+5.318
+2
+.070
+a. Friedman  檢定 
+以 Wilcoxon 檢定兩兩種類變數之間的差異發現，連續型變數與離散化變數的
+漸進顯著性的值為 0.025 < 0.05  所以之間有顯著差異，而且連續型變數比較好，
+Wilcoxon 檢定結果如表 4- 19 所示。 
+表 4- 19 Grid Search + SVM  不同變數準確率 Wilcoxon 檢定 
+檢定統計量 c 
+離散  -  半離散 連續型  -  半離散 連續型  -  離散 
+Z  檢定 
+漸近顯著性  (雙尾) 
+-1.077a
+.281
+-.626b
+.531
+-2.234b 
+.025 
+a.  以負等級為基礎。 
+b.  以正等級為基礎。 
+c. Wilcoxon  符號等級檢定 
+由本節的實驗準確率結果的檢定可知 Grid Search + SVM 模式採用不同的變
+數種類對於準確率沒有顯著影響。 
+4.5  類神經網路模式分析 
+本實驗使用 Matlab 的 newff 函數建構前饋式倒傳遞類神經網路來計算隔日臺
+股期貨指數漲跌準確率。所使用的參數如表 4- 20 所示。 
+48 
+參數 
+網路層數 
+第一層神經元數 
+第二層神經元數 
+第三層神經元數 
+迭代數目 
+表 4- 20  類神經網路參數 
+設定值 
+參數 
+3 
+22 
+10 
+1 
+150 
+輸入元素 
+第一層傳遞函數 
+第二層傳遞函數 
+第三層傳遞函數 
+訓練函數名稱 
+設定值 
+16 
+tansig 
+tansig 
+purelin 
+trainlm 
+4.5.1  類神經網路不同變數準確率 
+本節實驗每個測試資料集的訓練資料集為 12 個月，比較離散化變數、半離散
+化變數、連續型變數的準確率，實驗結果的較如表 4- 21 所示。 
+表 4- 21  類神經網路不同變數準確率 
+變數種類  Set 1  Set 2  Set 3  Set 4 Set 5 Set 6 Set 7 Set 8 Set 9 Set 10 Set 11 Set 12 Avg
+半離散化  47.6  52.4  47.6  57.1  47.6  52.4  66.7  61.9  28.6  52.4  47.6  61.9  52.0 
+離散化 
+連續型 
+33.3  61.9  47.6  38.1  57.1  61.9  42.9  42.9  47.6  42.9  57.1  52.4  48.8 
+57.1  28.6  52.4  47.6 57.1 52.4 61.9 47.6 28.6 61.9  42.9  71.4 50.8
+以無母數 Friedman 檢定半離散化、離散化、連續型變數對於準確率的差異，
+檢定的漸進顯著性值為  0.744 > 0.05  ，所以不同種類的變數對於準確率沒有顯著
+差異，  Friedman 檢定結果如表 4- 22 所示。 
+49 
+表 4- 22  類神經網路不同變數準確率 Friedman 檢定 
+檢定統計量 a 
+個數 
+卡方 
+自由度 
+漸近顯著性
+12
+.591
+2
+.744
+a. Friedman  檢定 
+以 Wilcoxon 檢定兩兩變數之間有無差異，Wilcoxon 檢定結果如表 4- 23 所
+示。 
+表 4- 23 類神經網路不同變數準確率 Wilcoxon 檢定 
+檢定統計量 c 
+離散  -  半離散 連續型  -  半離散 連續型  -  離散 
+Z  檢定 
+漸近顯著性  (雙尾) 
+-.907a
+.365
+-.155b
+.877
+-.537b 
+.592 
+a.  以負等級為基礎。 
+b.  以正等級為基礎。 
+c. Wilcoxon  符號等級檢定 
+由本節的實驗準確率結果的檢定可知類神經網路模式採用不同的變數種類對
+於準確率沒有顯著影響。 
+4.5.2  類神經網路不同迭代次數準確率 
+為了解類神經網路模式在不同的迭代次數對於準確率是否有顯著差異，選用
+的變數是 3.3 節半離散化的變數，每個測試資料集的訓練資料集為 12 個月，實驗
+結果如表 4- 24 所示。 
+50 
+表 4- 24  類神經網路不同迭代次數準確率 
+迭代次數  Set 1 Set 2  Set 3  Set 4 Set 5 Set 6 Set 7 Set 8 Set 9 Set 10 Set 11 Set 12 Avg
+epochs 150  47.6  52.4  47.6  57.1  47.6  52.4  66.7  61.9  28.6  52.4  47.6  61.9  52.0 
+epochs 300  47.6  52.4  28.6  38.1  57.1  57.1  57.1  57.1  47.6  38.1  61.9  47.6  49.2 
+epochs 500  47.6  47.6  33.3  38.1  52.4  52.4  71.4  57.1  57.1  52.4  42.9  42.9  49.6 
+以無母數 Friedman 檢定類神經網路不同的迭代次數對於準確率的差異，檢定
+的漸進顯著性值為  0.0.584 > 0.05  ，所以不同的迭代次數對於準確率沒有顯著差
+異，無母數  Friedman  檢定結果如表 4- 25 所示。 
+表 4- 25  類神經網路不同迭代次數準確率 Friedman 檢定 
+檢定統計量 a 
+個數 
+卡方 
+自由度 
+漸近顯著性
+12
+1.007
+2
+.584
+a. Friedman  檢定 
+由本節的實驗準確率結果的檢定可知類神經網路模式採用半離散化變數在不
+同的迭代次數對於準確率沒有顯著影響。 
+4.6  不同模式預測準確率結果比較 
+為比較上述四種模型準確率的差異所以選擇同樣基準的條件來比較，選擇的
+條件為半離散化變數、訓練資料週期為 12 個月，整理四種模型的準確率比較表如
+表 4- 26 所示，四種模式各個測試資料集的折線圖如圖 4- 3 所示。 
+51 
+表 4- 26  四種模式半離散化變數準確率 
+模式 
+Set 1 Set 2 Set 3 Set 4 Set 5 Set 6 Set 7 Set 8 Set 9 Set 10 Set 11 Set 12 Avg
+Decision Tree 
+52.4  42.9  47.6 61.9 52.4 38.1 57.1 52.4 47.6
+76.2  38.1  61.9 52.4 
+ACO + SVM 
+57.1  52.4  42.9  57.1  52.4  42.9  66.7  61.9  57.1  38.1  38.1  61.9  52.4 
+Grid Search + SVM 52.4  52.4  47.6  52.4  57.1  23.8  85.7  38.1  57.1  61.9  47.6  52.4  52.4 
+Neural Network 
+47.6  52.4  47.6  57.1  47.6  52.4  66.7  61.9  28.6  52.4  47.6  61.9  52.0 
+準
+確
+率
+%
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Set 1 Set 2 Set 3 Set 4 Set 5 Set 6 Set 7 Set 8 Set 9 Set 10 Set 11 Set 12
+Decision Tree
+ACO
+Grid Search
+Neural Network
+圖 4- 3  四種模式半離散化變數準確率折線圖 
+以無母數 Friedman 檢定四種模式準確率，漸進式顯著性數值為 0.976 > 0.05
+所以四種模式的準確率無顯著差異，Friedman 檢定結果如表 4- 27 所示。 
+52 
+表 4- 27  四種模式半離散化變數準確率 Friedman 檢定 
+檢定統計量 a 
+個數 
+卡方 
+自由度 
+漸近顯著性
+12
+.210
+3
+.976
+a. Friedman  檢定 
+以 Wilcoxon 檢定兩兩模式準確率有無差異，結果漸近顯著性數值都大於 0.05
+所以都無顯著性差異，Wilcoxon 檢定結果如表 4- 28 所示。 
+表 4- 28  四種模式半離散化變數準確率 Wilcoxon 檢定 
+檢定統計量 c 
+ACO – 
+格子點  –
+類神經  – 
+格子點  –
+類神經  - 
+類神經  –
+決策樹 
+決策樹 
+決策樹 
+ACO 
+ACO 
+格子點 
+Z  檢定 
+-1.012a
+-.466b
+-.256a
+-.051b
+-.170a 
+-.178b
+漸近顯著性  (雙尾) 
+.311
+.641
+.798
+.959
+.865 
+.858
+a.  以負等級為基礎。 
+b.  以正等級為基礎。 
+c. Wilcoxon  符號等級檢定 
+所以本研究使用的四種模式採用半離散化變數在 12 個月的訓練資料週期準
+確率無顯著差異。 
+4.7  不同模式半離散化變數使用次數比較 
+因為 4.4 節的格子點算法支援向量機模式分析的實驗及 4.5.1 節類神經網路不
+同變數準確率的實驗都是使用全部的變數來計算準確率，而 4.2.1 節決策樹模式實
+53 
+驗及 4.3.1 節、4.3.2 節 ACO + SVM 模式實驗會在實驗中篩選出對分類目標貢獻
+度較大的變數來使用，所以下列小節整理各個變數實驗結果使用的次數情形，希
+望因此找出貢獻度大的重要變數。 
+4.7.1  決策樹半離散化變數之變數使用次數 
+用 3.3 節半離散化變數，在 4.2.1 節決策樹半離散化變數的實驗中，12 個不同
+的測試資料集，每個資料集用 6 到 36 個月的測試資料共 72 個實驗中決策樹模式
+所篩選出的變數統計結果如圖 4- 4 所示。決策樹選擇的次數大於百分位數 75 的
+有 5 個變數，依序為 Attr1：當日成交量(70 次)、Attr7：5 日 RSI(72 次)、Attr8：9
+日 KD 值(69 次)、Attr12：10 日 W%R(72 次)。 
+70
+64
+59
+65
+62
+55
+72
+69
+63
+69 68
+72
+68 66
+61
+50
+次
+數
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Attr 
+1
+Attr 
+2
+Attr 
+3
+Attr 
+4
+Attr 
+5
+Attr 
+6
+Attr 
+7
+Attr 
+8
+Attr 
+9
+Attr 
+10
+Attr 
+11
+Attr 
+12
+Attr 
+13
+Attr 
+14
+Attr 
+15
+Attr 
+16
+圖 4- 4  決策樹各個變數使用次數統計圖 
+4.7.2  蟻群算法支援向量機半離散化變數各項目使用次數 
+在 4.3.1 節 ACOR + SVM 半離散化變數的實驗中，12 個不同的測試資料集，
+每個資料集用 6 到 36 個月的測試資料共 72 個實驗 ACO+SVM 模式所篩選出的變
+數統計結果如圖 4- 5 所示，選擇次數大於百分位數 75 的變數有 5 個變數，依序
+為 Attr4：當日漲跌(47 次)、Attr10：10 日 DMI(47 次)、Attr12：10 日 W%R(58
+54 
+次)、Attr13：10 日 PSY(58 次)、Attr16：20 日 BR(52 次)。 
+次
+數
+70
+60
+50
+40
+30
+20
+10
+0
+58 58
+52
+47
+41
+47
+40
+29
+22
+12
+29
+22
+16 14
+29
+19
+Attr 
+1
+Attr 
+2
+Attr 
+3
+Attr 
+4
+Attr 
+5
+Attr 
+6
+Attr 
+7
+Attr 
+8
+Attr 
+9
+Attr 
+10
+Attr 
+11
+Attr 
+12
+Attr 
+13
+Attr 
+14
+Attr 
+15
+Attr 
+16
+圖 4- 5 ACO + SVM 半離散化變數各變數使用次數統計圖 
+比較前面兩小節選用次數較多的變數，共同選到次數較多的變數為 Attr10：
+10 日 DMI、Attr12：10 日 W%R。 
+4.7.3  格子點算法使用蟻群算法篩選出的變數準確率 
+為比較 ACO + SVM 模式所篩選出的變數拿來做為輸入變數是否可以維持同
+樣的準確率，所以本節實驗使用 Grid Search + SVM  模式採用上一節 4.7.2 所選出
+次數較高的項目來計算準確率，訓練資料集的週期同樣為 12 個月，並與 4.4 節格
+子點算法支援向量機模式分析半離散化變數準確率結果來比較，實驗結果如表 4- 
+29 所示。 
+55 
+表 4- 29 Grid Search  半離散化變數與篩選後變數準確率 
+變數種類  Set 1  Set 2  Set 3  Set 4 Set 5 Set 6 Set 7 Set 8 Set 9 Set 10 Set 11 Set 12 Avg
+半離散化 
+16 變數 
+篩選後 
+5 變數 
+57.1  52.4  42.9  57.1  52.4  42.9  66.7  61.9  57.1  38.1  38.1  61.9  52.4 
+57.1  66.7  47.6  66.7 52.4 42.9 76.2 38.1 42.9 42.9  38.1  52.4 52.0
+使用 Wilcoxon 檢定 Grid Search + SVM 模式採用半離散化變數與 Grid Search 
++ SVM 使用 ACO + SVM 所篩選出來的 5 半離散化變數準確率的檢定結果如
+表 4- 30 所示。 
+表 4- 30 Grid Search 半離散化變數與篩選後變數準確率 Wilcoxon 檢定 
+檢定統計量 b 
+半離散 5 變數  -  半離散 
+Z  檢定 
+漸近顯著性  (雙尾) 
+-.119a 
+.905 
+a.  以正等級為基礎。 
+b. Wilcoxon  符號等級檢定 
+由 Wilcoxon 檢定的漸進顯著性值為 0.95 > 0.05  兩者準確率無顯著差異，所
+以 ACO + SVM 模式可以減少輸入變數項目同時維持相同的準確率。 
+4.8  不同模式執行時間之比較 
+在 4.6 節不同模式預測準確率結果比較的結果顯示並無顯著差異，本節比較
+上述實驗的執行時間希望能找出效率最高的分類模型，四種模式的執行時間如表
+4- 31 所示，執行最快的為決策樹模式執行每個實驗的時間不到一秒。第二快的是
+類神經網路，執行一次實驗的時間平均 0.1 分鐘。速度排第三的是 Grid Search + 
+SVM 模式，執行一次實驗時間平均 21.5 分鐘。執行時間最久的是 ACO + SVM 模
+56 
+式，執行一次實驗的平均時間是 38.5 分鐘。 
+表 4- 31  四種模式半離散化變數之執行時間 
+Set1 
+Set2  Set3  Set4
+Set5
+Set6
+Set7
+Set8
+Set9 Set10  Set11  Set12 Avg
+0.0 
+0.0  0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+0.0 
+42.1  32.8  47.6  29.3  31.7  35.5  59.2  47.2  23.9  39.3  48.5  24.8  38.5 
+19.5  20.5  21.5  21.3  20.7  21.4  22.9  23.9  23.7  22.8  18.5  20.9  21.5 
+0.2 
+0.3  0.1 
+0.1
+0.2 
+0.2 
+0.1 
+0.1 
+0.1 
+0.1 
+0.1 
+0.1 
+0.1 
+模式 
+Decision 
+Tree 
+ACO 
+Grid 
+Search 
+Neural 
+Network 
+所以在本研究使用的四種模式準確率無顯著差異的情況下，執行效率最好的
+是決策樹模式。 
+57 
+伍、  結論與未來研究方向 
+5.1  研究結論 
+本研究嘗試以決策樹、ACO + SVM、Grid Search + SVM 及類神經網路四種
+模式採用離散化、半離散化及連續型三種不同的輸入變數來預測臺股期貨隔日的
+漲跌，並比較不同模式採用不同變數的準確率。經由研究結果發現： 
+1.  決策樹、ACO + SVM 採用半離散化變數用不同週期的訓練資料集對於
+預測準確率沒有顯著影響。 
+2.  預測準確率與不同的測試資料集有顯著影響。 
+3.  用 12 個月週期的訓練資料集，四種模式採用離散、半離散、連續型變數
+對於預測準確率沒有顯著影響。 
+4.  四種模式執行相同測試資料集、訓練資料集的效率決策樹最好，其次是
+類神經網路，再來是 Grid Search + SM，時間最久的是 ACO + SVM。 
+由以上研究結果顯示本研究所用的四種模式採用不同的輸入變數，準確率無
+顯著差異。且用 12 個月週期的訓練資料集，四種模式用三種不同的輸入變數平均
+準確率接近六成。 
+5.2  研究限制 
+1.  本研究使用的蟻群演算法、類神經網路有許多的參數可調整，因為時間
+的限制無法一一實驗來測試對預測準確率有多少影響。 
+2.  本研究未使用會影響臺股期貨收盤價的因素例如：基本分析指標、總體
+經濟指標及國際股市。所以無法知道會對準確率有多少影響。 
+3.  本研究使用的測試資料集時間區間是 2007 年 12 月 26 日到 2008 年 12
+月 30 日，別的時間區間預測準確率未知。 
+58 
+5.3  未來研究方向 
+1.  輸入變數方面：可採用與本研究不同的日期範圍以及用基本分析指標及
+總體經濟指標。 
+2.  輸出變數方面：可改為預測收盤價或投資報酬率。 
+3.  預測模式方面：改可用迴歸分析、Markov Chain、ARIMA、ANFIS 等等。 
+4.  研究對象方面：可改為電子期貨、小型臺指期貨、S&P500、NASDAQ
+指數等等。 
+5.  尋找 SVM 最佳參數方面：本研究運用的方法為格子點算法及蟻群演算
+法，可改為遺傳演算法、模擬退火法等等。 
+6.  可以用較少天數的歷史資料作為訓練樣本，或許可以增加技術分析方法
+的準確率。 
+7.  可嘗試使用隨機理論的技術及方法研究預測的準確率。 
+59 
+參考文獻 
+一、中文部分 
+1.  李佳玲，2008，蟻群演算法為基礎之屬性選擇與分類器參數調整，國立
+高雄第一科技大學資訊管理系，碩士論文。 
+2.  李建輝，2002，遺傳演化類神經網路在預測臺股指數期貨的應用，東吳
+大學經濟學系，碩士論文。 
+3.  李惠妍，2003，類神經網路與迴歸模式在台股指數期貨預測之研究，國
+立成功大學管理學院高階管理碩士在職專班(EMBA)  ，碩士論文。 
+4.  黃承龍，林景翔，2008，屬性選擇與支援向量機之參數最佳化：結合連
+續與離散型蟻群演算法，第十四屆資訊管理暨實務研討會(CSIM2008)，
+2008 年 12 月 13 日，台北市東吳大學。 
+5.  洪雅雯，2007，台灣上市化學生技醫療類股價指數預測之研究，國立成
+功大學統計學系碩博士班，碩士論文。 
+6.  許宏勝，2008，第一次買台指期貨就上手，易博士出版社。 
+7.  陳有忠，2007，決策樹運用於銀行之詐騙帳戶，國立東華大學資訊工程
+學系，碩士論文。 
+8.  陳佳慶，2005，倒傳遞類神經網路於臺灣期貨交易所股價指數期貨預測
+之應用，國立高雄第一科技大學金融營運所，碩士論文。 
+9.  郭英哲，2004，應用倒傳遞類神經網路技術於臺灣指數期貨預測之研究，
+南台科技大學資訊管理系，碩士論文。 
+10.  黃俊霖，2004，應用約略集理論與模糊理論於臺股指數期貨漲跌幅之預
+測，    國立台灣科技大學資訊管理系，碩士論文。 
+11.  臺灣期貨交易所  http://www.taifex.com.tw/chinese/home.htm 
+12.  劉易昌，2003  ，支援向量機於財務預測上之應用，靜宜大學資訊管理學
+系研究所，碩士論文。 
+13.  蔡承益，2007，使用 SOM-SVR 混合型系統搭配屬性篩選模式應用於臺
+灣股票指數期貨預測，國立高雄第一科技大學資訊管理系，碩士論文。 
+14.  鄧俊偉，2008，技術指標於台股期貨操作績效之研究－以 SAR 與 TRIX
+60 
+組合為例，中國文化大學資訊管理研究所碩士在職專班，碩士論文。 
+15.  應哲磊，2006，使用支援向量機預測台灣期貨指數，華梵大學資訊管理
+研究所，碩士學位論文。 
+二、英文部分 
+1.  A. Skabar, I. Cloete., 2002, “Neural Networks and Financial Trading and the 
+Efficient Markets Hypothesis,” In Proceedings of Australasian Computer 
+Science Conference, pp.241-249. 
+2.  Ahmed, A.A., 2005, “Feature Subset Selection Using Ant Colony 
+Optimization”. International Journal of Computational Intelligence, 2(1), 
+pp.53-58. 
+3.  Blum, A.L. and Langley, P., 1997, “Selection of relevant features and 
+examples in machine learning”. Artificial Intelligence, 97(1-2), pp. 245-271. 
+4.  Browning, E. S.,2007, “Reading Mrket Ta Laves, ” The Wall Street Journal 
+Europe, Dow Jones, pp.17-18. 
+5.  Burges, C., 1998, “A tutorial on support vector machines for pattern 
+recognition,” Data Mining and Knowledge Discovery, 2(2), pp.121-167. 
+6.  Chen, Y. W. and Lin, C. J.,2005, “Combining SVMs with various feature 
+selection strategies”, Feature Extraction, Foundations and Applications, 
+Springer-Verlag , pp.273-282. 
+7.  Cheol-Ho Park and Scott H. Irwin.,2006, “What Do We Know about the 
+Profitability of Technical Analysis? ”. 
+8.  Dorigo, M. & Blum, C.,2005, “Ant colony optimization theory: A survey”, 
+Theoretical Computer Science, 344 (2-3), pp.243-278. 
+9.  Dorigo, M. & Gambardella, L. M. ,1997, “Ant colonies for the traveling 
+salesman problem”, BioSystems, 43, pp.73-81. 
+10.  Dorigo, M. & Gambardella,L. M,1997, “Ant colony system: A cooperative 
+learning approach to the traveling salesman problem”, IEEE Transactions on 
+Evolutionary Computation, 1(1), pp.53–66. 
+61 
+11.  Dorigo, M. & Stutzle, T.,2004, “Ant Colony Optimization, MIT Press”, 
+Cambridge, MA. 
+12.  Dorigo, M., Caro, G. D. & Gambardella, L. M. ,1999, “Ant algorithms for 
+discrete optimization”, Artificial Life, 5(2), pp.137–172. 
+13.  Dorigo, M., Maniezzo, V. & Colorni, A. ,1996, “The ant system: 
+optimization by a colony of cooperating agents”, IEEE Transactions on 
+System, Man, and Cybernetics, 26(1), pp.1-13.   
+14.  Dorigo, M., Maniezzo,V. & Colorni, A.,1996, “Ant system: optimization by 
+a colony of cooperating agents”, IEEE Trans. Systems, Man, Cybernet.-Part 
+B 26 (1) , pp.29–41. 
+15.  Fama, E. F., 1970, “Efficient Capital Markets II: A Review of Theory and 
+Empirical Work ” Journal of Finance, Vol. 25, pp. 383-416. 
+16.  Hsu, C. W., Chang, C. C. and Lin, C. J. ,2003, “A practical guide to support 
+vector classification”. 
+available:http://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf. 
+17.  Huang, C.L. and Wang, C.J. ,2006, “A GA-Based Feature Selection and 
+Parameter Optimization for Support Vector Machine”, Expert Systems with 
+Applications, 31(2), pp.231-240. 
+18.  Kimoto, T., Asakawa, K., Yoda, M., & Takeoka, M. ,1990, “Stock market 
+prediction system with modular neural network”, Proceedings of the 
+International Joint Conference on Neural Networks (IJCNN1990), 1, San 
+Diego, USA, 1-6. 
+19.  Liu, H. & Motoda, H. ,1998, “Feature Selection for Knowledge Discovery 
+and Data Mining”, Kluwer Academic, Norwell, MA. 
+20.  Liu, Q., Lu, X., Ren, F. and Kuroiwa, S. ,2004, “Automatic Estimation of 
+Stock Market Forecasting and Generating the Corresponding Natural 
+Language Expression”, Proceedings of the International Conference on 
+Information Technology: Coding and Computing (ITCC2004), 1, Las Vegas, 
+USA, pp.241-245. 
+62 
+21.  W. McCulloch, W. Pitts, 1943, “A Logical Calculus of The Ideas Immanent 
+in Nervous Activity”, Bulletin of Mathematical Biophysics. , Vol. 5, 
+pp.115-133. 
+22.  Nison, Steve ,1994, “Beyond Candlesticks: New Japanese Charting 
+Techniques Revealed”, John Wiley and Sons, p. 14. ISBN 047100720X. 
+23.  Pruitt, Stephen W., and Richard E. White,1988, “The CRISMA Trading 
+System: Who Says Technical Analysis Can’t Beat the Market?” Journal of 
+Portfolio Management, pp.55-58. 
+24.  Schőlkopf, B. & Smola, A. J.,2000, “Statistical Learning and Kernel 
+Methods”, MIT Press, Cambridge, Massachustees, USA. 
+25.  Schőlkopf, B., Burges, C. & Vapnik, V. ,1995, “Extracting support data for a 
+given task”, In First International Conference on Knowledge Discovery & 
+Data Mining, Menlo Park, USA, pp.252-257. 
+63 

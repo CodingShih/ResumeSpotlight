@@ -1,0 +1,570 @@
+備的效能是 Jstson Nano 的 9 倍，使用 YOLOv3-tiny 可以達到 33.27FPS。 
+為了進一步得到偵測人員對鏡頭的距離，經費許可下，本研究建議可用毫
+米波雷達的使用，相關硬體也需要提升為 NVIDIA 更高規格的開發板，才能達即
+時偵測的效果。使用毫米波雷達，能夠大幅度提升偵測移動物體的速度。其實施
+流程如圖 5-1。 
+圖 5-1 建議加入毫米波雷達的實作流程 
+41 
+參考文獻 
+[1]  IDC2018 中國攝像頭出貨量
+https://www.idc.com/getdoc.jsp?containerId=prCHC45072019 
+[2]  劉仲鑫和范智傑,“居家安全監視系統之研究”,華岡工程學報, 25  期,pp7-
+13,2010 
+[3]  謝宗志(Hsieh Tsung Chih)和王伯頎(Wang Po Chi),“臺北市政府警察局運用
+調閱錄影監視系統提升偵查犯罪成效之評估研究”,刑事政策與犯罪研究論
+文集, 23 集, pp.485 – 525,2020 
+[4]  熊丁丁,“多通道毫米波雷達人體檢測定位方法研究”,電子科技大學碩士論
+文,2018   
+[5]  徐朝陽,“毫米波雷達運動人體目標建模與特徵提取”,哈爾濱工業大學碩士
+論文,2019   
+[6]  2018 中國人工智慧白皮書
+http://www.360doc.com/content/18/0513/22/27972427_753685633.shtml 
+[7]  Alex  Krizhevsky,  Ilya  Sutskever,  and  Geoffrey  E.  Hinton.  2017.  ImageNet 
+classification  with  deep  convolutional  neural  networks.  Commun.  ACM  60,  6 
+(June 2017), pp84–90.   
+[8]  Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi; Proceedings of the 
+IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016, pp. 
+779-788 
+[9]  Joseph Redmon, Ali Farhadi; Proceedings of the IEEE Conference on Computer 
+Vision and Pattern Recognition (CVPR), 2017, pp. 7263-7271   
+[10] Joseph Redmon and Ali Farhadi. Yolov3: An incremental improvement. CoRR, 
+abs/1804.02767, 2018.   
+[11] A. Bochkovskiy, C.-Y. Wang, and H.-Y. M. Liao, “Yolov4: Optimal speed and 
+accuracy of object detection,” arXiv preprint arXiv:2004.10934, 2020. 
+[12] 王志宇,“基於深度學習之嵌入式即時行人偵測及追蹤系統”  ,國立中央大
+學資訊工程學系碩士論文,2018   
+[13] 王靜波,“基於嵌入式的行人檢測跟蹤研究與實現”,中北大學網路出版年期
+2020 年  09 期,2020   
+[14] 李鬱晨,“晶圓圖缺陷分類與嵌入式系統實現”國立中央大學電機工程學系
+碩士論文,2019   
+[15]楊朝龍、花凱龍,“應用影像辨識於車輛機具防撞預警模組製作”,勞動部
+勞動及職業安全衛生研究所研究報告期末報告,2020 
+[16] Li Liu, Wanli Ouyang, Xiaogang Wang, Paul Fieguth, Jie Chen, Xinwang Liu, 
+Matti Pietikäinen, “Deep Learning for Generic Object Detection: A Survey”, 
+<i>arXiv e-prints</i>, 2018. 
+42 
+[17] P. Viola and M. Jones, “Rapid object detection using a boosted cascade of simple 
+features,”  in  Computer  Vision  and  Pattern  Recognition,  2001.  CVPR  2001. 
+Proceedings  of  the  2001  IEEE  Computer  Society  Conference  on,  vol.  1. 
+IEEE,2001, pp. I–I 
+[18] P. Viola and M. J. Jones, “Robust real-time face detection,” International journal 
+of computer vision, vol. 57, no. 2, pp. 137–154, 2004. 
+[19] N. Dalal and B. Triggs, “Histograms of oriented gradients for human detection,” 
+in Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer 
+Society Conference on, vol. 1. IEEE, 2005, pp. 886–893. 
+[20] D. G. Lowe, “Object recognition from local scale-invariant features,” in Computer 
+vision, 1999. The proceedings of the seventh IEEE international conference on, 
+vol. 2. Ieee, 1999, pp. 1150–1157.   
+[21] David  G.  Lowe,  “Distinctive  image  features  from  scale-invariant  keypoints,” 
+International journal of computer vision, vol. 60, no. 2, pp. 91–110, 2004. 
+[22] S.  Belongie,  J.  Malik,  and  J.  Puzicha,  “Shape  matching  and  object  recognition 
+using shape contexts,” CALIFORNIA UNIV SAN DIEGO LA JOLLA DEPT OF 
+COMPUTER SCIENCE AND ENGINEERING, Tech. Rep., 2002. 
+[23] P.  Felzenszwalb,  D.  McAllester,  and  D.  Ramanan,  “A  discriminatively  trained, 
+multiscale, deformable part model,” in Computer Vision and Pattern Recognition, 
+2008. CVPR 2008. IEEE Conference on. IEEE, 2008, pp. 1–8. 
+[24] P. F. Felzenszwalb, R. B. Girshick, and D. McAllester, “Cascade object detection 
+with  deformable  part  models,”  in  Computer  vision  and  pattern  recognition 
+(CVPR), 2010 IEEE conference on. IEEE, 2010, pp. 2241–2248. 
+[25] P.  F.  Felzenszwalb,  R.  B.  Girshick,  D.  McAllester,  and  D.  Ramanan,  “Object 
+detection with discriminatively trained part-based models,” IEEE transactions on 
+pattern analysis and machine intelligence, vol. 32, no. 9, pp. 1627– 1645, 2010. 
+[26] Zou, Z., Shi, Z., Guo, Y., and Ye, J., “Object Detection in 20 Years: A Survey”, 
+<i>arXiv e-prints</i>, 2019. 
+[27] R. B. Girshick, P. F. Felzenszwalb, and D. A. Mcallester, “Object detection with 
+grammar models,” in Advances in Neural Information Processing Systems, 2011, 
+pp. 442–450.   
+[28] R.  B.  Girshick,  From  rigid  templates  to  grammars:  Object  detection  with 
+structured models. Citeseer, 2012. 
+[29] A. Krizhevsky, I. Sutskever, and G. E. Hinton, “Imagenet classification with deep 
+convolutional  neural  networks,”  in  Advances  in  neural  information  processing 
+systems, 2012, pp. 1097–1105 
+[30] Pedro  F.  Felzenszwalb;  Ross  B.  Girshick;  David  McAllester;  Deva  Ramanan,” 
+Object  Detection  with  Discriminatively  Trained  Part-Based  Models,”  in  IEEE 
+43 
+Transactions on Pattern Analysis and Machine Intelligence ( Volume: 32, Issue: 9, 
+Sept. 2010),pp. 1627 – 1645 
+[31] K.  Simonyan  and  A.  Zisserman,  “Very  deep  convolutional  networks  for  large-
+scale image recognition,” arXiv preprint arXiv:1409.1556, 2014. 
+[32] C.  Szegedy,  V.  Vanhoucke,  S.  Ioffe,  J.  Shlens,  and  Z.  Wojna,  “Rethinking  the 
+inception  architecture  for  computer  vision,”  in  Proceedings  of  the  IEEE 
+conference on computer vision and pattern recognition, 2016, pp. 2818–2826. 
+[33] C.  Szegedy,  W.  Liu,  Y.  Jia,  P.  Sermanet,  S.  Reed,  D.  Anguelov,  D.  Erhan,  V. 
+in 
+Vanhoucke,  and  A.  Rabinovich,  “Going  deeper  with  convolutions,” 
+Proceedings of the IEEE conference on computer vision and pattern recognition, 
+2015, pp. 1–9.   
+[34] S.  Ioffe  and  C.  Szegedy,  “Batch  normalization:  Accelerating  deep  network 
+training by reducing  internal  covariate shift,” arXiv preprint  arXiv:1502.03167, 
+2015.   
+[35] C. Szegedy, S. Ioffe, V. Vanhoucke, and A. A. Alemi, “Inception-v4, inception-
+resnet and the impact of residual connections on learning.” in AAAI, vol. 4, 2017, 
+p. 12. 
+[36] Y  Jia,E  Shelhamer,J  Donahue,S  Karayev,J  Long,R  Girshick,S  Guadarrama,T 
+Darrell,”  Caffe: Convolutional Architecture for Fast Feature Embedding”  in : 
+Proceedings of the 22nd ACM international conference on Multimedia, November 
+2014,pp. 675–678 
+[37] Dai  J,  Li  Y,  He  K,  et  al.  R-fcn:  Object  detection  via  region-based  fully 
+convolutional networks[C]//Advances in neural information processing systems. 
+2016: 379-387. 
+[38] Kaiming He, Georgia Gkioxari, Piotr Dollar, Ross Girshick; Proceedings of the 
+IEEE International Conference on Computer Vision (ICCV), 2017, pp. 2961-2969 
+[39] R.  Girshick,  “Fast  R-CNN,”  in  IEEE  International  Conference  on  Computer 
+Vision (ICCV), 2015. 
+[40] Ren, S., He, K., Girshick, R., Sun, J.: Faster R-CNN: Towards real-time object 
+detection with region proposal networks (2015), in Neural Information Processing 
+Systems (NIPS) 
+[41] Liu  W,  Anguelov  D,  Erhan  D,  et  al.  Ssd:  Single  shot  multibox 
+detector[C]//European conference on computer vision. Springer, Cham, 2016: 21-
+37. 
+[42] T.-Y. Lin, P. Dollar, R. Girshick, K. He, B. Hariharan, and ´ S. Belongie. Feature 
+pyramid networks for object detection. In CVPR, 2017. 2, 4, 5, 7 
+[43] Fu C Y, Liu W, Ranga A, et al. DSSD: Deconvolutional single shot detector[J]. 
+arXiv preprint arXiv:1701.06659, 2017. 
+44 
+[44] Zhuang Liu, Jianguo Li, Zhiqiang Shen, Gao Huang, Shoumeng Yan, Changshui 
+Zhang, “ Learning  Efficient  Convolutional  Networks  Through  Network 
+Slimming”,IEEE International Conference on Computer Vision (ICCV), 2017, 
+pp. 2736-2744 
+45 
+附錄 
+附錄一 程式碼 
+（一）環境 
+-Ubuntu 18.04 
+-Python 3.6 
+-opencv-python 4.5 
+-Pytorch 1.7.0 
+（二）主程式碼 
+main.py 
+import numpy as np 
+import tracker 
+from detector import Detector 
+import cv2,os,sys 
+import argparse 
+import time 
+def point_on_line(point1, point2, point): 
+        '''point  是否在兩點所在的直線上？返回等於 0，在直線上，>0 在直線
+右邊，<0 在直線左邊''' 
+        if(point1[0]==point2[0]): 
+                return point[0]-point1[0] 
+        else: 
+                k = (point1[1]-point2[1])/(point1[0]-point2[0]) 
+                b = point2[1]-k*point2[0] 
+                return point[1]-(k*point[0])-b 
+def point_in_rect(rect, point): 
+        '''point 是否在以四點為頂點的矩形框內  返回-1,1 值，1 表示在區域
+內，-1 在區域外面''' 
+        point1 = rect[0] 
+        point2 = rect[1] 
+        point3 = rect[2] 
+        point4 = rect[3] 
+46 
+        side1 = point_on_line(point1, point2, point) * point_on_line(point3, point4, 
+point) 
+        side2 = point_on_line(point1, point4, point) * point_on_line(point2, point3, 
+point) 
+        retbool = side1<0 and side2<0 
+        ret = [-1,1][retbool] 
+        return ret 
+##輸入參數--------------------------- 
+parser = argparse.ArgumentParser(description='Get the input data') 
+parser.add_argument('-v', '--video',help='The video to test', 
+default='./video/test.mp4',type=str) 
+parser.add_argument('-t', '--thre',help='The threshould of alarm', default=60, 
+type=float) 
+parser.add_argument('-j', '--jump',help='jump frames to detect, 1 do not jump', 
+default=1, type=int) 
+args = parser.parse_args() 
+if __name__ == '__main__': 
+        #  初始化  yolov5 和顯示的配置--------------------------------------------------- 
+        font_draw_number = cv2.FONT_HERSHEY_SIMPLEX 
+        draw_text_postion = (int(960 * 0.01), int(540 * 0.05)) 
+        detector = Detector() 
+        # ---------------------------------------------------------------------------------------- 
+        #  打開視頻--------------------------------------------------------------------------- 
+        ##視頻檔 
+        srcPath = args.video    ###'../testVideo/testVideo4.mp4' 
+        jump = args.jump 
+        if(srcPath.isdigit()): 
+                print("open camera!") 
+                capture = cv2.VideoCapture(int(srcPath)) 
+                datalen = 10000000 
+47 
+        else: 
+                print("\n\n"+"-"*100) 
+                print("Now process video: %s..."%srcPath) 
+                capture = cv2.VideoCapture(srcPath) 
+                datalen = int(capture.get(cv2.CAP_PROP_FRAME_COUNT)) 
+        fps=capture.get(cv2.CAP_PROP_FPS) 
+frameSize=(int(capture.get(cv2.CAP_PROP_FRAME_WIDTH)),int(capture.get(
+cv2.CAP_PROP_FRAME_HEIGHT))) 
+        # ---------------------------------------------------------------------------------------- 
+        #保存檔路徑，資料夾,最好別和源視頻檔放在一起！否則會覆蓋源視
+頻！---------------------------- 
+        destPath = './result' 
+        os.makedirs(destPath,exist_ok=True) 
+        if(srcPath.isdigit()): 
+                basename = time.strftime('%H-%M-%S', time.localtime(time.time())) 
+                as_time_folder_name = time.strftime('%Y-%m-%d', 
+time.localtime(time.time())) 
+savepath=os.path.join(destPath,as_time_folder_name+"_"+basename+".mp4") 
+        else: 
+                savepath=os.path.join(destPath,os.path.basename(srcPath)) 
+        print("Save path is: %s!"%savepath) 
+        fourcc = cv2.VideoWriter_fourcc(*'XVID') 
+        streamWriter = cv2.VideoWriter(savepath, fourcc, fps, frameSize) 
+        assert streamWriter.isOpened(), 'Cannot open video: %s for 
+writing'%savepath 
+        # ---------------------------------------------------------------------------------------- 
+        cnt=0 ##幀計數 
+        allTrks={} ## allTrks---> key: track id, value: [[cx1,cy1],[cx2,cy2]]歷史一
+點的位置和當前一點的位置 
+        while True: 
+                #  讀取每幀圖片 
+                _, im = capture.read() 
+48 
+                if im is None: 
+                        print("finish frocess video!") 
+                        break 
+                sys.stdout.write("\rprocess frame: %d/%d..."%(cnt+1, datalen)) 
+                sys.stdout.flush() 
+                bboxes=[] 
+                list_bboxs = [] 
+                if(cnt%jump==0):####跳幀檢測 
+                        ##使用 960, 540 圖片進行檢測----------------------------------------
+- 
+                        imDet = im##cv2.resize(im, (960, 540)) 
+                        # scaleX,scaleY = im.shape[1]/960, im.shape[0]/540 
+                        if(cnt%10==0 and False):###保存幀圖片 
+                                cv2.imwrite("./frames/%d.jpg"%cnt,imDet) 
+                        scaleX,scaleY = 1,1 
+                        bboxes = detector.detect(imDet) 
+                        #將框放大到原來尺寸----------------------------------------- 
+                        for i in range(len(bboxes)): 
+                                bboxes[i][0] = bboxes[i][0]*scaleX 
+                                bboxes[i][1] = bboxes[i][1]*scaleY 
+                                bboxes[i][2] = bboxes[i][2]*scaleX 
+                                bboxes[i][3] = bboxes[i][3]*scaleY 
+                # -----------------------------------------------------------------------------------
+----- 
+                #  如果畫面中  有 bbox 則進行跟蹤 
+                if len(bboxes) > 0 or True: 
+                        list_bboxs = tracker.update(bboxes, im) 
+                        #  畫跟蹤框 
+                        output_image_frame = tracker.draw_bboxes(im, list_bboxs, 
+line_thickness=None, ALARMTHRE=args.thre) 
+                else: 
+                        #  如果畫面中  沒有 bbox 
+                        output_image_frame = im 
+                cnt+=1 
+                streamWriter.write(output_image_frame) 
+49 
+                pass 
+        pass 
+        capture.release() 
+        streamWriter.release() 
+        print("Finish process, result is: %s."%savepath) 
+detector.py 
+import numpy as np 
+import inference_darknet 
+import cv2 
+class Detector: 
+        def __init__(self): 
+                self.threshold1 = 0.3 
+                self.threshold2 = 0.1 
+self.person_det=inference_darknet.darknetInfer(function="person",thresh=self.th
+reshold1) 
+self.behavior_det=inference_darknet.darknetInfer(function="behavior",thresh=se
+lf.threshold2) 
+        def compute_IOU(self, rec1, rec2): 
+                # rec:[cx,cy,w,h] 
+                rec1 = [rec1[0]-rec1[2]/2, rec1[1]-rec1[3]/2, rec1[0]+rec1[2]/2, 
+rec1[1]+rec1[3]/2] 
+                rec2 = [rec2[0]-rec2[2]/2, rec2[1]-rec2[3]/2, rec2[0]+rec2[2]/2, 
+rec2[1]+rec2[3]/2] 
+                # rec: [xmin,ymin,xmax,ymax] 
+                left_column_max    = max(rec1[0],rec2[0]) 
+                right_column_min = min(rec1[2],rec2[2]) 
+                up_row_max              = max(rec1[1],rec2[1]) 
+                down_row_min          = min(rec1[3],rec2[3]) 
+                #兩矩形無相交區域的情況 
+                if left_column_max>=right_column_min or 
+down_row_min<=up_row_max: 
+50 
+                        return 0 
+                #  兩矩形有相交區域的情況 
+                else: 
+                        S1 = (rec1[2]-rec1[0])*(rec1[3]-rec1[1]) 
+                        S2 = (rec2[2]-rec2[0])*(rec2[3]-rec2[1]) 
+                        S_cross = (down_row_min-up_row_max)*(right_column_min-
+left_column_max) 
+                        return S_cross/(S1+S2-S_cross) 
+        def confirm(self, personDet, goodsDet): 
+                ##每個 goods 的歸屬人 
+                for goods in goodsDet: 
+                        max_iou=0 
+                        max_ind=0 
+                        for ii,per in enumerate(personDet): 
+                                iou = self.compute_IOU(goods[2],per[2]) 
+                                if(iou>max_iou): 
+                                        max_iou=iou 
+                                        max_ind=ii 
+                        if(max_iou>0): 
+                                if(len(personDet[max_ind])!=4): 
+                                        personDet[max_ind].append([[goods[0],goods[1]]]) 
+                                else: 
+                                        if(goods[0] not in [v[0] for v in 
+personDet[max_ind][3]]): 
+personDet[max_ind][3].append([goods[0],goods[1]]) 
+                        else:##漏檢測人 
+                                perBbox = [goods[2][0], goods[2][1], goods[2][2]*1.1, 
+goods[2][3]*2] 
+                                personDet.append(['person', goods[1], perBbox, 
+[[goods[0],goods[1]]] ]) 
+                return personDet 
+        def rectDetect(self, personDet, im): 
+                for ii,per in enumerate(personDet): 
+                        rec = per[2] 
+51 
+                        x1, y1, x2, y2 =[int(v) for v in [rec[0]-rec[2]/2, rec[1]-rec[3]/2, 
+rec[0]+rec[2]/2, rec[1]+rec[3]/2]] 
+                        imgRect=im[y1:y2,x1:x2] 
+                        if(imgRect.shape[0]==0 or imgRect.shape[1]==0):continue 
+                        goodsDet = self.behavior_det(imgRect) 
+                        ##畫圖查看 
+                        for gos in goodsDet: 
+                                rec = gos[2] 
+                                x1, y1, x2, y2 =[int(v) for v in [rec[0]-rec[2]/2, rec[1]-
+rec[3]/2, rec[0]+rec[2]/2, rec[1]+rec[3]/2]] 
+                                imgRect = 
+cv2.rectangle(imgRect,(x1,y1),(x2,y2),(12,12,255),1) 
+                                imgRect = cv2.putText(imgRect, 
+"%.1f"%(float(gos[1])/100), (x1,y1-5), 0, 1, 
+                                                (12,12,255), thickness=1, 
+lineType=cv2.LINE_AA) 
+                        if(len(goodsDet)>0): 
+                                personDet[ii].append([]) 
+                                for god in goodsDet: 
+                                        personDet[ii][3].append([god[0],god[1]]) 
+                return personDet 
+        def detect(self, im): 
+                ##檢測人 
+                personDet = self.person_det(im) 
+                if 0: ##區域檢測 
+                        objDet = self.rectDetect(personDet, im) 
+                else:   
+                        ##全域檢測： 
+                        goodsDet = self.behavior_det(im) 
+                        # ###根據 goods 框歸屬為哪個人 
+                        objDet = self.confirm(personDet, goodsDet) 
+                        for gos in goodsDet: 
+                                rec = gos[2] 
+                                x1, y1, x2, y2 =[int(v) for v in [rec[0]-rec[2]/2, rec[1]-
+rec[3]/2, rec[0]+rec[2]/2, rec[1]+rec[3]/2]] 
+52 
+                                im = cv2.rectangle(im,(x1,y1),(x2,y2),(12,12,255),1) 
+                                im = cv2.putText(im, "%.1f"%(float(gos[1])/100), (x1,y1-5), 
+0, 1, 
+                                                (12,12,255), thickness=1, 
+lineType=cv2.LINE_AA) 
+                boxes = [] 
+                for det in objDet: 
+                        if(len(det)==4): 
+                                lbl=str(det[3]) 
+                        else: 
+                                lbl=det[0] 
+                        rec = det[2] 
+                        conf = det[1] 
+                        x1, y1, x2, y2 = [rec[0]-rec[2]/2, rec[1]-rec[3]/2, rec[0]+rec[2]/2, 
+rec[1]+rec[3]/2] 
+                        boxes.append( 
+                                [x1, y1, x2, y2, lbl, float(conf)]) 
+                return boxes 
+tracker.py 
+import cv2 
+import torch 
+import numpy as np 
+import random 
+from deep_sort.utils.parser import get_config 
+from deep_sort.deep_sort import DeepSort 
+cfg = get_config() 
+cfg.merge_from_file("./deep_sort/configs/deep_sort.yaml") 
+deepsort = DeepSort(cfg.DEEPSORT.REID_CKPT, 
+                                        max_dist=cfg.DEEPSORT.MAX_DIST, 
+min_confidence=cfg.DEEPSORT.MIN_CONFIDENCE, 
+nms_max_overlap=cfg.DEEPSORT.NMS_MAX_OVERLAP, 
+max_iou_distance=cfg.DEEPSORT.MAX_IOU_DISTANCE, 
+53 
+                                        max_age=cfg.DEEPSORT.MAX_AGE, 
+n_init=cfg.DEEPSORT.N_INIT, nn_budget=cfg.DEEPSORT.NN_BUDGET, 
+                                        use_cuda=True) 
+colorList = 
+[(random.randint(0,255),random.randint(0,255),random.randint(0,255)) for i in 
+range(1000)] 
+def draw_bboxes(image, bboxes, line_thickness, ALARMTHRE=50): 
+        line_thickness = line_thickness or round( 
+                0.002 * (image.shape[0] + image.shape[1]) / 2) + 1 
+        list_pts = [] 
+        point_radius = 4 
+        alarmID = {} 
+        for (x1, y1, x2, y2, name, trk_id, alarmScore) in bboxes: 
+                color = colorList[int(trk_id)%1000] 
+                #  撞線的點 
+                check_point_x = x1 
+                check_point_y = int(y1 + ((y2 - y1) * 0.6)) 
+                c1, c2 = (x1, y1), (x2, y2) 
+                cv2.rectangle(image, c1, c2, color, thickness=line_thickness, 
+lineType=cv2.LINE_AA) 
+                font_thickness = max(line_thickness - 1, 1) 
+                t_size = cv2.getTextSize(name, 0, fontScale=line_thickness / 3, 
+thickness=font_thickness)[0] 
+                c2 = c1[0] + t_size[0], c1[1] - t_size[1] - 3 
+                cv2.rectangle(image, c1, (x2,c2[1]), color, -1, cv2.LINE_AA)    # filled 
+                cv2.putText(image, "ID:%d--S:%.2f"%(trk_id,alarmScore), (c1[0], 
+c1[1] - 2), 0, line_thickness / 3, 
+                                        (0,0,255), thickness=font_thickness, 
+lineType=cv2.LINE_AA) 
+                cv2.putText(image, "(%d,%d)"%(int(x1),int(y1)), (c1[0], c1[1] - 40), 
+0, line_thickness / 4, 
+                                        (0,0,255), thickness=font_thickness, 
+54 
+lineType=cv2.LINE_AA) 
+                if(alarmScore>ALARMTHRE): 
+                        alarmID[trk_id]=alarmScore 
+        ##列印超過閾值 ALARMTHRE 的報警，繪製到圖上顯示 
+        ystrip=80 
+        for k,v in alarmID.items(): 
+                cv2.putText(image, "Alarm ID:%d, score:%.1f"%(k,float(v)), 
+(2,ystrip), 0, line_thickness / 4, 
+                                        (0,0,255), thickness=font_thickness, 
+lineType=cv2.LINE_AA) 
+                ystrip+=100 
+        return image 
+def update(bboxes, image): 
+        bbox_xywh = [] 
+        confs = [] 
+        bboxes2draw = [] 
+        names=[] 
+        if len(bboxes) > 0: 
+                for x1, y1, x2, y2, lbl, conf in bboxes: 
+                        obj = [ 
+                                int((x1 + x2) / 2), int((y1 + y2) / 2), 
+                                x2 - x1, y2 - y1 
+                        ] 
+                        names.append(lbl) 
+                        bbox_xywh.append(obj) 
+                        confs.append(conf) 
+        xywhs = torch.Tensor(bbox_xywh) 
+        confss = torch.Tensor(confs) 
+        outputs = deepsort.update(xywhs, confss, names, image) 
+        for value in outputs: 
+                x1, y1, x2, y2, track_id, name, alarmScore = value 
+                bboxes2draw.append((x1, y1, x2, y2, name, track_id, alarmScore)) 
+55 
+        pass 
+        return bboxes2draw 
+inference_darknet.py 
+import os 
+import random 
+import darknet 
+import time 
+import cv2 
+import numpy as np 
+class darknetInfer: 
+        def __init__(self,function="person",thresh=0.3): 
+                weights=None 
+                config_file=None 
+                data_file=None 
+                self.function=function 
+                if(function=="person"): 
+                        weights="./weights/person/yolov4.weights" 
+                        config_file="./weights/person/yolov4.cfg" 
+                        data_file="./weights/person/coco.data" 
+                else: 
+                        weights="./weights/behavior/yolov4-acc_best.weights" 
+                        config_file="./weights/behavior/yolov4-acc-test.cfg" 
+                        data_file="./weights/behavior/acc.data" 
+                assert weights is not None and config_file is not None and data_file is 
+not None, "Build darknet failed for: %s"%function 
+                self.network, self.class_names, self.class_colors = 
+darknet.load_network( 
+config_file, 
+data_file, 
+weights, 
+batch_size=1 
+56 
+                                                                                                                                ) 
+                self.width = darknet.network_width(self.network) 
+                self.height = darknet.network_height(self.network) 
+                self.darknet_image = darknet.make_image(self.width, self.height, 3) 
+                self.thresh = thresh 
+        def __call__(self,image_bgr): 
+                image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB) 
+                image_resized = cv2.resize(image_rgb, (self.width, self.height), 
+                                                                interpolation=cv2.INTER_LINEAR) 
+                darknet.copy_image_from_bytes(self.darknet_image, 
+image_resized.tobytes()) 
+                detections = darknet.detect_image(self.network, self.class_names, 
+self.darknet_image, thresh=self.thresh) 
+                if(0):##測試 
+                        image = darknet.draw_boxes(detections, image_resized, 
+self.class_colors) 
+                        cv2.imwrite("infere_%s.jpg"%self.function,image) 
+                        print(detections) 
+                ##檢測框需要還原到原來的尺寸大小 
+                scalew, scaleh = image_bgr.shape[1]/self.width, 
+image_bgr.shape[0]/self.height 
+                detection_fix=[] 
+                for ii,det in enumerate(detections): 
+                        if(self.function=="person" and det[0]!="person"): 
+                                continue 
+                        detScale=[det[2][0]*scalew, det[2][1]*scaleh, det[2][2]*scalew, 
+det[2][3]*scaleh] 
+                        detection_fix.append([det[0],det[1],detScale]) 
+                return detection_fix 
+        def __del__(self): 
+                darknet.free_image(self.darknet_image) 
+if __name__ == "__main__": 
+57 
+        DET = darknetInfer(function="beh") 
+        imgbgr=cv2.imread("person.jpg") 
+        det = DET(imgbgr) 
+附錄二 相關軟體及操作 
+deep_sort 部分代碼來自 Github：https://github.com/nwojke/deep_sort 
+YOLO 數據集預處理軟件，標定 label 框軟件：lableImg v1.8.0 
+左側 Open Dir 打開需要處理的圖片集檔夾,Change Save Dir 修改儲存數據之檔
+夾，PascalVOC 按鈕可切換保存數據的格式，可由 PascalVOC 和 YOLO 格式之
+間切換。點擊 Create RectBox 可繪製 label 框，並且可在彈出介面輸入 label。點
+擊 Save 即可儲存當前繪製的 label 框與 label。 
+1.  演算法邏輯 
+演算法使用 yolo  v4 作為人檢測（記為 det1），採用 deepsort 進行檢測目標
+的跟蹤，同時 yolov4 對人戴帽子、口罩、墨鏡、左顧右盼進行檢測（記為 det2）。
+利用 det1 和 det2 檢測目標間的 iou 判斷帽子口罩等目標的歸屬（歸屬哪個人）。
+跟蹤目標即時得分判斷：利用跟蹤目標最近連續 20 幀得分最高的作為當前目標
+的即時報警得分，報警得分的公式如下： 
+最終得分  =  戴帽子檢測得分*30 +  戴口罩檢測得分*30 +  戴墨鏡檢測得分*30 + 
+左顧右盼檢測得分*30 
+檢測得分為 0~1 的浮點值，如果目標沒有檢測到該項則該項得分為 0。 
+2.  代碼說明 
+main.py 代碼主入口，包含對攝像頭或者本地視頻的讀取，整個代碼邏輯處理，
+調用 detector.py 裡面的 Detector 類別進行目標檢測同時調用 deepsort 進行跟蹤。 
+tracker.py:  控制目標跟蹤流程，處理報警資訊 
+inference_darknet.py:    yolov4 模型推理類 
+detector.py：調用 inference_darknet.py 進行推理同時處理檢測類別 
+libdarknet.so：darknet 工具編譯出來的動態庫檔用於推理 yolov4 模型，需要在其
+他庫編譯好後 copy 到當前路徑 
+darknet.py：darknet 庫推理代碼調用 libdarknet.so 動態庫的介面進行模型的推理 
+result 資料夾：運行視頻的結果存放路徑 
+deep_sort 資料夾：跟蹤庫文件 
+weight 資料夾：存放模型的 weights 權重以及設定檔，注意在 inference_darknet.py
+利用修改替換 
+58 
+3.代碼運行說明   
+編譯好 darknet，將編譯好的動態庫 libdarknet.so 拷貝到當前目錄資料夾 
+進入到目錄運行代碼： 
+  運行攝像頭，攝像頭標號一般為 0,1,2,...，電腦只有一個攝像頭一般為 0： 
+python main.py -v  攝像頭標號  -t  報警閾值  -j  跳幀多少檢測 
+說明：  -j  跳幀多少幀檢測  這個不加的話默認不跳幀，跳幀可以加速演算法，-j 
+後面值為整數 1,2,3,..分別表示每 1，2，3 幀檢測，為 1  表示不跳幀每一幀都檢
+測。 
+59 
